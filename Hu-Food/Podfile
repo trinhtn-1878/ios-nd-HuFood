@@ -1,0 +1,39 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'Hu-Food' do
+
+  pod 'Reusable', '4.0.5'
+  pod 'Then', '2.4'
+  
+  # Networking
+  pod 'Alamofire', '~> 4.8.1'
+  
+  # Mapping
+  pod 'AlamofireObjectMapper', '~> 5.2.0'
+  
+  # Convention
+  pod 'SwiftLint', '~> 0.31.0'
+  
+  # Database
+  pod 'Realm', '~> 3.13.1'
+  
+  #  Image
+  pod 'Kingfisher', '4.10.1'
+
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Hu-Food
+
+  target 'Hu-FoodTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'Hu-FoodUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
