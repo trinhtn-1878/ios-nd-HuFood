@@ -17,6 +17,5 @@ class MainViewController: UIViewController {
     }
 }
 extension MainViewController: StoryboardSceneBased {
-    
     static var sceneStoryboard = Storyboards.main
 }

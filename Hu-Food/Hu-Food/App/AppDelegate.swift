@@ -6,7 +6,7 @@
 //  Copyright © 2019 nguyen.the.trinh. All rights reserved.
 //
 
-import UIKit
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,10 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        let navi = UINavigationController()
+        let nav = UINavigationController()
         let vc = MainViewController.instantiate()
-        navi.viewControllers.append(vc)
-        window?.rootViewController = navi
+        nav.viewControllers.append(vc)
+        window?.rootViewController = nav
         window?.makeKeyAndVisible()
         return true
     }
