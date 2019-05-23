@@ -1,0 +1,51 @@
+PODS:
+  - Alamofire (4.8.2)
+  - AlamofireObjectMapper (5.2.0):
+    - Alamofire (~> 4.7)
+    - ObjectMapper (~> 3.4)
+  - Kingfisher (4.10.1)
+  - ObjectMapper (3.4.2)
+  - Realm (3.13.1):
+    - Realm/Headers (= 3.13.1)
+  - Realm/Headers (3.13.1)
+  - Reusable (4.0.5):
+    - Reusable/Storyboard (= 4.0.5)
+    - Reusable/View (= 4.0.5)
+  - Reusable/Storyboard (4.0.5)
+  - Reusable/View (4.0.5)
+  - SwiftLint (0.31.0)
+  - Then (2.4.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.8.1)
+  - AlamofireObjectMapper (~> 5.2.0)
+  - Kingfisher (= 4.10.1)
+  - Realm (~> 3.13.1)
+  - Reusable (= 4.0.5)
+  - SwiftLint (~> 0.31.0)
+  - Then (= 2.4)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - AlamofireObjectMapper
+    - Kingfisher
+    - ObjectMapper
+    - Realm
+    - Reusable
+    - SwiftLint
+    - Then
+
+SPEC CHECKSUMS:
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  AlamofireObjectMapper: 92b6ce2423a9d159e686f6a1d514a009bf903ddc
+  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
+  ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
+  Realm: 50071da38fe079e0735e47c9f2eae738c68c5996
+  Reusable: 188be1a54ac0691bc66e5bb24ec6eb91971b315b
+  SwiftLint: 7a0227733d786395817373b2d0ca799fd0093ff3
+  Then: 71866660c7af35a7343831f7668e7cd2b62ee0f2
+
+PODFILE CHECKSUM: 73bbbac02c39f50ca908333b64d5405fa8df2947
+
+COCOAPODS: 1.6.1
