@@ -19,6 +19,23 @@
 		9CD1648522965CF8007CAAA0 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD1648222965CF7007CAAA0 /* UIView+.swift */; };
 		9CD1648622965CF8007CAAA0 /* UIViewController+Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD1648322965CF8007CAAA0 /* UIViewController+Debug.swift */; };
 		9CD1648722965CF8007CAAA0 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD1648422965CF8007CAAA0 /* UIViewController+.swift */; };
+		9CEA16F922968EC9000C4851 /* RepoFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEA16F822968EC9000C4851 /* RepoFood.swift */; };
+		9CEA170822968F02000C4851 /* CustomRequestAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEA16FC22968F02000C4851 /* CustomRequestAdapter.swift */; };
+		9CEA170922968F02000C4851 /* BaseResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEA16FD22968F02000C4851 /* BaseResult.swift */; };
+		9CEA170A22968F02000C4851 /* FoodResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEA16FF22968F02000C4851 /* FoodResponse.swift */; };
+		9CEA170B22968F02000C4851 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEA170022968F02000C4851 /* APIService.swift */; };
+		9CEA170C22968F02000C4851 /* APIUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEA170122968F02000C4851 /* APIUrls.swift */; };
+		9CEA170D22968F02000C4851 /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEA170322968F02000C4851 /* BaseRequest.swift */; };
+		9CEA170E22968F02000C4851 /* FoodRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEA170422968F02000C4851 /* FoodRequest.swift */; };
+		9CEA170F22968F02000C4851 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEA170622968F02000C4851 /* ErrorResponse.swift */; };
+		9CEA171022968F02000C4851 /* BaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEA170722968F02000C4851 /* BaseError.swift */; };
+		9CEA171322968F26000C4851 /* RestSearchDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEA171122968F26000C4851 /* RestSearchDetail.swift */; };
+		9CEA171422968F26000C4851 /* RestDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEA171222968F26000C4851 /* RestDetail.swift */; };
+		9CEA1716229695D8000C4851 /* InforRestaurantRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEA1715229695D8000C4851 /* InforRestaurantRequest.swift */; };
+		9CEA171A22978ADA000C4851 /* ReviewResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEA171922978ADA000C4851 /* ReviewResponse.swift */; };
+		9CEA171C22978B94000C4851 /* Reviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEA171B22978B94000C4851 /* Reviews.swift */; };
+		9CEA171E2297910C000C4851 /* ReviewsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEA171D2297910C000C4851 /* ReviewsRequest.swift */; };
+		9CEA1720229795F1000C4851 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEA171F229795F1000C4851 /* API.swift */; };
 		BCBC8A61EE1B3E4940429215 /* Pods_Hu_Food.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C293294903A0A54BA7F618E4 /* Pods_Hu_Food.framework */; };
 		FE09EC3AA16A4B09DACEE3CA /* Pods_Hu_FoodUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 034508E9090D6987E5869DCA /* Pods_Hu_FoodUITests.framework */; };
 /* End PBXBuildFile section */
@@ -65,6 +82,23 @@
 		9CD1648222965CF7007CAAA0 /* UIView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		9CD1648322965CF8007CAAA0 /* UIViewController+Debug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Debug.swift"; sourceTree = "<group>"; };
 		9CD1648422965CF8007CAAA0 /* UIViewController+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
+		9CEA16F822968EC9000C4851 /* RepoFood.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoFood.swift; sourceTree = "<group>"; };
+		9CEA16FC22968F02000C4851 /* CustomRequestAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomRequestAdapter.swift; sourceTree = "<group>"; };
+		9CEA16FD22968F02000C4851 /* BaseResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseResult.swift; sourceTree = "<group>"; };
+		9CEA16FF22968F02000C4851 /* FoodResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodResponse.swift; sourceTree = "<group>"; };
+		9CEA170022968F02000C4851 /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		9CEA170122968F02000C4851 /* APIUrls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIUrls.swift; sourceTree = "<group>"; };
+		9CEA170322968F02000C4851 /* BaseRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRequest.swift; sourceTree = "<group>"; };
+		9CEA170422968F02000C4851 /* FoodRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodRequest.swift; sourceTree = "<group>"; };
+		9CEA170622968F02000C4851 /* ErrorResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
+		9CEA170722968F02000C4851 /* BaseError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseError.swift; sourceTree = "<group>"; };
+		9CEA171122968F26000C4851 /* RestSearchDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestSearchDetail.swift; sourceTree = "<group>"; };
+		9CEA171222968F26000C4851 /* RestDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestDetail.swift; sourceTree = "<group>"; };
+		9CEA1715229695D8000C4851 /* InforRestaurantRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InforRestaurantRequest.swift; sourceTree = "<group>"; };
+		9CEA171922978ADA000C4851 /* ReviewResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewResponse.swift; sourceTree = "<group>"; };
+		9CEA171B22978B94000C4851 /* Reviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reviews.swift; sourceTree = "<group>"; };
+		9CEA171D2297910C000C4851 /* ReviewsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsRequest.swift; sourceTree = "<group>"; };
+		9CEA171F229795F1000C4851 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		B200D943C0BD97999558A256 /* Pods-Hu-FoodUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hu-FoodUITests.debug.xcconfig"; path = "Target Support Files/Pods-Hu-FoodUITests/Pods-Hu-FoodUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C293294903A0A54BA7F618E4 /* Pods_Hu_Food.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hu_Food.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F53A695A1FE7C5AEA9306E2A /* Pods-Hu-FoodTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hu-FoodTests.debug.xcconfig"; path = "Target Support Files/Pods-Hu-FoodTests/Pods-Hu-FoodTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -125,6 +159,7 @@
 			children = (
 				9CD1647222965620007CAAA0 /* App */,
 				9CD16475229656A0007CAAA0 /* Extensions */,
+				9CEA16F722968EC9000C4851 /* Restaurants */,
 				9CD164732296564E007CAAA0 /* Data */,
 				9CD16476229656AD007CAAA0 /* Scences */,
 				9CD16477229656E7007CAAA0 /* Support */,
@@ -174,6 +209,9 @@
 		9CD164742296568E007CAAA0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9CEA171222968F26000C4851 /* RestDetail.swift */,
+				9CEA171122968F26000C4851 /* RestSearchDetail.swift */,
+				9CEA171B22978B94000C4851 /* Reviews.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -232,16 +270,69 @@
 		9CD1648022965CD0007CAAA0 /* Remote */ = {
 			isa = PBXGroup;
 			children = (
-				9CD1648122965CD8007CAAA0 /* API */,
+				9CEA16FA22968F02000C4851 /* API */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
 		};
-		9CD1648122965CD8007CAAA0 /* API */ = {
+		9CEA16F722968EC9000C4851 /* Restaurants */ = {
 			isa = PBXGroup;
 			children = (
+				9CEA16F822968EC9000C4851 /* RepoFood.swift */,
+			);
+			path = Restaurants;
+			sourceTree = "<group>";
+		};
+		9CEA16FA22968F02000C4851 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				9CEA16FB22968F02000C4851 /* Middleware */,
+				9CEA16FE22968F02000C4851 /* Response */,
+				9CEA170022968F02000C4851 /* APIService.swift */,
+				9CEA170122968F02000C4851 /* APIUrls.swift */,
+				9CEA170222968F02000C4851 /* Request */,
+				9CEA170522968F02000C4851 /* Error */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		9CEA16FB22968F02000C4851 /* Middleware */ = {
+			isa = PBXGroup;
+			children = (
+				9CEA16FC22968F02000C4851 /* CustomRequestAdapter.swift */,
+				9CEA16FD22968F02000C4851 /* BaseResult.swift */,
+				9CEA171F229795F1000C4851 /* API.swift */,
+			);
+			path = Middleware;
+			sourceTree = "<group>";
+		};
+		9CEA16FE22968F02000C4851 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				9CEA16FF22968F02000C4851 /* FoodResponse.swift */,
+				9CEA171922978ADA000C4851 /* ReviewResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		9CEA170222968F02000C4851 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				9CEA170322968F02000C4851 /* BaseRequest.swift */,
+				9CEA170422968F02000C4851 /* FoodRequest.swift */,
+				9CEA1715229695D8000C4851 /* InforRestaurantRequest.swift */,
+				9CEA171D2297910C000C4851 /* ReviewsRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		9CEA170522968F02000C4851 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				9CEA170622968F02000C4851 /* ErrorResponse.swift */,
+				9CEA170722968F02000C4851 /* BaseError.swift */,
+			);
+			path = Error;
 			sourceTree = "<group>";
 		};
 		B3455B3DBD6E94F24BD2DA4C /* Pods */ = {
@@ -505,12 +596,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CEA170F22968F02000C4851 /* ErrorResponse.swift in Sources */,
+				9CEA171322968F26000C4851 /* RestSearchDetail.swift in Sources */,
+				9CEA16F922968EC9000C4851 /* RepoFood.swift in Sources */,
 				9CD1648522965CF8007CAAA0 /* UIView+.swift in Sources */,
+				9CEA170822968F02000C4851 /* CustomRequestAdapter.swift in Sources */,
 				9CD1647F2296583F007CAAA0 /* MainViewController.swift in Sources */,
+				9CEA171C22978B94000C4851 /* Reviews.swift in Sources */,
+				9CEA171E2297910C000C4851 /* ReviewsRequest.swift in Sources */,
+				9CEA170B22968F02000C4851 /* APIService.swift in Sources */,
+				9CEA170E22968F02000C4851 /* FoodRequest.swift in Sources */,
+				9CEA171422968F26000C4851 /* RestDetail.swift in Sources */,
 				9CD1648722965CF8007CAAA0 /* UIViewController+.swift in Sources */,
+				9CEA170922968F02000C4851 /* BaseResult.swift in Sources */,
 				9CD1648622965CF8007CAAA0 /* UIViewController+Debug.swift in Sources */,
+				9CEA170C22968F02000C4851 /* APIUrls.swift in Sources */,
+				9CEA1720229795F1000C4851 /* API.swift in Sources */,
 				9CD1647D229657DC007CAAA0 /* Storyboards.swift in Sources */,
+				9CEA1716229695D8000C4851 /* InforRestaurantRequest.swift in Sources */,
+				9CEA170A22968F02000C4851 /* FoodResponse.swift in Sources */,
+				9CEA171A22978ADA000C4851 /* ReviewResponse.swift in Sources */,
+				9CEA170D22968F02000C4851 /* BaseRequest.swift in Sources */,
 				9CD16445229655F7007CAAA0 /* AppDelegate.swift in Sources */,
+				9CEA171022968F02000C4851 /* BaseError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
