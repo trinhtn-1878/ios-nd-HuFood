@@ -10,6 +10,7 @@ import ObjectMapper
 
 final class FoodResponse: Mappable {
     var restSearchDetail = [RestSearchDetail]()
+    
     required init(map: Map) {
         mapping(map: map)
     }

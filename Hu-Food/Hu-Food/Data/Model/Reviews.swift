@@ -14,6 +14,7 @@ struct Reviews {
     var rating: String
     var user: [String]
 }
+
 extension Reviews {
     init() {
         self.init(
@@ -24,6 +25,7 @@ extension Reviews {
         )
     }
 }
+
 extension Reviews: Mappable {
     init?(map: Map) {
         self.init()

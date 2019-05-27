@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1083705954116-69qbhbde66cpqjiglricoqfo8p0ukp77.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1083705954116-69qbhbde66cpqjiglricoqfo8p0ukp77</string>
+	<key>API_KEY</key>
+	<string>AIzaSyD2ItFxwwTPExmap-ILklj2yFiInTgl2cw</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1083705954116</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>sun-asterisk.Hu-Food</string>
+	<key>PROJECT_ID</key>
+	<string>hu-food</string>
+	<key>STORAGE_BUCKET</key>
+	<string>hu-food.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1083705954116:ios:827969a863ee67d6</string>
+	<key>DATABASE_URL</key>
+	<string>https://hu-food.firebaseio.com</string>
+</dict>
+</plist>
