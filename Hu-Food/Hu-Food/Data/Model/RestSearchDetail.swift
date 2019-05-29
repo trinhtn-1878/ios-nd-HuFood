@@ -13,6 +13,7 @@ struct RestSearchDetail {
     var name: String
     var transactions: [String]
     var distance: Double
+    var categoryFood: [CategoryFood]
     var imageUrl: String
 }
 
@@ -23,6 +24,7 @@ extension RestSearchDetail {
             name: "",
             transactions: [],
             distance: 0,
+            categoryFood: [CategoryFood](),
             imageUrl: ""
         )
     }
@@ -39,5 +41,6 @@ extension RestSearchDetail: Mappable {
         transactions <- map["transactions"]
         distance <- map["distance"]
         imageUrl <- map["image_url"]
+        categoryFood <- map["categories"]
     }
 }

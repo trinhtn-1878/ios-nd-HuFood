@@ -38,6 +38,7 @@ final class LoginViewController: UIViewController {
     @IBAction private func handleCreateAccountTapped(_ sender: Any) {
         let registerVC = RegisterViewController.instantiate()
         navigationController?.pushViewController(registerVC, animated: true)
+
     }
 }
 

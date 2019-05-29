@@ -10,3 +10,5 @@
 @import UIKit;
 @import Then;
 @import Reusable;
+
+#define RED_COLOR UIColor.init(red: 255, green: 37, blue: 82, alpha: 1)
