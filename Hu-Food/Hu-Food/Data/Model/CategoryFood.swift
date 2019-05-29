@@ -26,6 +26,7 @@ extension CategoryFood: Mappable {
     init?(map: Map) {
         self.init()
     }
+    
     mutating func mapping(map: Map) {
         alias <- map["alias"]
         title <- map["title"]

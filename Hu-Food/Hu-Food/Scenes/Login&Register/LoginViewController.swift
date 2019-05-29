@@ -17,6 +17,11 @@ final class LoginViewController: UIViewController {
         configView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.isNavigationBarHidden = true
+    }
+    
     deinit {
         logDeinit()
     }
@@ -38,7 +43,6 @@ final class LoginViewController: UIViewController {
     @IBAction private func handleCreateAccountTapped(_ sender: Any) {
         let registerVC = RegisterViewController.instantiate()
         navigationController?.pushViewController(registerVC, animated: true)
-
     }
 }
 

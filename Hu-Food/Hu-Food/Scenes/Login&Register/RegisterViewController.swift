@@ -48,7 +48,6 @@ final class RegisterViewController: UIViewController {
     
     @IBAction private func handleGoToSignInTapped(_ sender: Any) {
          navigationController?.popViewController(animated: true)
-
     }
 }
 

@@ -9,13 +9,13 @@
 import ObjectMapper
 
 final class FoodResponse: Mappable {
-    var restSearchDetail = [RestSearchDetail]()
+    var restaurants = [Restaurant]()
 
     required init(map: Map) {
         mapping(map: map)
     }
     
     func mapping(map: Map) {
-        restSearchDetail <- map["businesses"]
+        restaurants <- map["businesses"]
     }
 }

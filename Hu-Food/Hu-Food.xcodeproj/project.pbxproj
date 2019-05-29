@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		9C178521229E745900744507 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1784E5229E745900744507 /* AppDelegate.swift */; };
-		9C178526229E745900744507 /* UISearchBar+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1784ED229E745900744507 /* UISearchBar+.swift */; };
 		9C178527229E745900744507 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1784EE229E745900744507 /* UIView+.swift */; };
 		9C178528229E745900744507 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1784EF229E745900744507 /* UIViewController+.swift */; };
 		9C178529229E745900744507 /* UIViewController+Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1784F0229E745900744507 /* UIViewController+Debug.swift */; };
@@ -16,7 +15,7 @@
 		9C17852D229E745900744507 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1784F8229E745900744507 /* UserViewController.swift */; };
 		9C17852E229E745900744507 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1784FA229E745900744507 /* LoginViewController.swift */; };
 		9C17852F229E745900744507 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1784FB229E745900744507 /* RegisterViewController.swift */; };
-		9C178531229E745900744507 /* RestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1784FF229E745900744507 /* RestCollectionViewCell.swift */; };
+		9C178531229E745900744507 /* RestaurantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1784FF229E745900744507 /* RestaurantCell.swift */; };
 		9C178532229E745900744507 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C178500229E745900744507 /* MainViewController.swift */; };
 		9C178533229E745900744507 /* RepoFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C178502229E745900744507 /* RepoFood.swift */; };
 		9C178534229E745900744507 /* UserReponsitory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C178503229E745900744507 /* UserReponsitory.swift */; };
@@ -42,8 +41,11 @@
 		9C8E6E6F229E842B009FCE9A /* LoginAndRegister.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C1784F6229E745900744507 /* LoginAndRegister.storyboard */; };
 		9C8E6E70229E8457009FCE9A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C1784E9229E745900744507 /* GoogleService-Info.plist */; };
 		9C8E6E71229E8457009FCE9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C1784EA229E745900744507 /* LaunchScreen.storyboard */; };
-		9C8E6E72229E8480009FCE9A /* RestCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C1784FE229E745900744507 /* RestCollectionViewCell.xib */; };
+		9CE9AA2C229F84BA001184C8 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE9AA2B229F84BA001184C8 /* UIColorExtension.swift */; };
+		9CE9AA30229FE3B3001184C8 /* imagePlaceHolder.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CE9AA2F229FE3B3001184C8 /* imagePlaceHolder.png */; };
+		9CE9AA32229FEC84001184C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C1784E8229E745900744507 /* Assets.xcassets */; };
 		BCBC8A61EE1B3E4940429215 /* Pods_Hu_Food.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C293294903A0A54BA7F618E4 /* Pods_Hu_Food.framework */; };
+		CFF980E622A02237004873D4 /* RestaurantCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C1784FE229E745900744507 /* RestaurantCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,7 +57,6 @@
 		9C1784E8229E745900744507 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C1784E9229E745900744507 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9C1784EB229E745900744507 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		9C1784ED229E745900744507 /* UISearchBar+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISearchBar+.swift"; sourceTree = "<group>"; };
 		9C1784EE229E745900744507 /* UIView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		9C1784EF229E745900744507 /* UIViewController+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		9C1784F0229E745900744507 /* UIViewController+Debug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Debug.swift"; sourceTree = "<group>"; };
@@ -65,8 +66,8 @@
 		9C1784F8229E745900744507 /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		9C1784FA229E745900744507 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9C1784FB229E745900744507 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		9C1784FE229E745900744507 /* RestCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RestCollectionViewCell.xib; sourceTree = "<group>"; };
-		9C1784FF229E745900744507 /* RestCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestCollectionViewCell.swift; sourceTree = "<group>"; };
+		9C1784FE229E745900744507 /* RestaurantCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RestaurantCell.xib; sourceTree = "<group>"; };
+		9C1784FF229E745900744507 /* RestaurantCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantCell.swift; sourceTree = "<group>"; };
 		9C178500229E745900744507 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		9C178502229E745900744507 /* RepoFood.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoFood.swift; sourceTree = "<group>"; };
 		9C178503229E745900744507 /* UserReponsitory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserReponsitory.swift; sourceTree = "<group>"; };
@@ -91,6 +92,8 @@
 		9C17851F229E745900744507 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		9C178520229E745900744507 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CD16441229655F7007CAAA0 /* Hu-Food.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hu-Food.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CE9AA2B229F84BA001184C8 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		9CE9AA2F229FE3B3001184C8 /* imagePlaceHolder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imagePlaceHolder.png; sourceTree = "<group>"; };
 		B200D943C0BD97999558A256 /* Pods-Hu-FoodUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hu-FoodUITests.debug.xcconfig"; path = "Target Support Files/Pods-Hu-FoodUITests/Pods-Hu-FoodUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C293294903A0A54BA7F618E4 /* Pods_Hu_Food.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hu_Food.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F53A695A1FE7C5AEA9306E2A /* Pods-Hu-FoodTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hu-FoodTests.debug.xcconfig"; path = "Target Support Files/Pods-Hu-FoodTests/Pods-Hu-FoodTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -114,10 +117,10 @@
 				9C1784E4229E745900744507 /* App */,
 				9C1784EC229E745900744507 /* Extensions */,
 				9C178501229E745900744507 /* Reponsitory */,
-				9C1784E6229E745900744507 /* Restaurants */,
 				9C178504229E745900744507 /* Data */,
-				9C1784F1229E745900744507 /* Scences */,
+				9C1784F1229E745900744507 /* Scenes */,
 				9C1784E8229E745900744507 /* Assets.xcassets */,
+				9CE9AA2F229FE3B3001184C8 /* imagePlaceHolder.png */,
 				9C1784E9229E745900744507 /* GoogleService-Info.plist */,
 				9C1784EA229E745900744507 /* LaunchScreen.storyboard */,
 				9C17851F229E745900744507 /* Bridging-Header.h */,
@@ -134,25 +137,18 @@
 			path = App;
 			sourceTree = "<group>";
 		};
-		9C1784E6229E745900744507 /* Restaurants */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Restaurants;
-			sourceTree = "<group>";
-		};
 		9C1784EC229E745900744507 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				9C1784ED229E745900744507 /* UISearchBar+.swift */,
 				9C1784EE229E745900744507 /* UIView+.swift */,
 				9C1784EF229E745900744507 /* UIViewController+.swift */,
 				9C1784F0229E745900744507 /* UIViewController+Debug.swift */,
+				9CE9AA2B229F84BA001184C8 /* UIColorExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		9C1784F1229E745900744507 /* Scences */ = {
+		9C1784F1229E745900744507 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
 				9C1784F2229E745900744507 /* Storyboard */,
@@ -160,7 +156,7 @@
 				9C1784F9229E745900744507 /* Login&Register */,
 				9C1784FC229E745900744507 /* Main */,
 			);
-			path = Scences;
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 		9C1784F2229E745900744507 /* Storyboard */ = {
@@ -202,8 +198,8 @@
 		9C1784FD229E745900744507 /* RestCollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				9C1784FE229E745900744507 /* RestCollectionViewCell.xib */,
-				9C1784FF229E745900744507 /* RestCollectionViewCell.swift */,
+				9C1784FE229E745900744507 /* RestaurantCell.xib */,
+				9C1784FF229E745900744507 /* RestaurantCell.swift */,
 			);
 			path = RestCollectionViewCell;
 			sourceTree = "<group>";
@@ -406,11 +402,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C8E6E72229E8480009FCE9A /* RestCollectionViewCell.xib in Resources */,
+				CFF980E622A02237004873D4 /* RestaurantCell.xib in Resources */,
 				9C8E6E70229E8457009FCE9A /* GoogleService-Info.plist in Resources */,
 				9C8E6E71229E8457009FCE9A /* LaunchScreen.storyboard in Resources */,
 				9C8E6E6E229E842B009FCE9A /* Main.storyboard in Resources */,
+				9CE9AA32229FEC84001184C8 /* Assets.xcassets in Resources */,
 				9C8E6E6F229E842B009FCE9A /* LoginAndRegister.storyboard in Resources */,
+				9CE9AA30229FE3B3001184C8 /* imagePlaceHolder.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,14 +495,14 @@
 				9C178537229E745900744507 /* UserDataResult.swift in Sources */,
 				9C178533229E745900744507 /* RepoFood.swift in Sources */,
 				9C178545229E745900744507 /* RestDetail.swift in Sources */,
+				9CE9AA2C229F84BA001184C8 /* UIColorExtension.swift in Sources */,
 				9C178521229E745900744507 /* AppDelegate.swift in Sources */,
-				9C178531229E745900744507 /* RestCollectionViewCell.swift in Sources */,
+				9C178531229E745900744507 /* RestaurantCell.swift in Sources */,
 				9C178546229E745900744507 /* CategoryFood.swift in Sources */,
 				9C178529229E745900744507 /* UIViewController+Debug.swift in Sources */,
 				9C178528229E745900744507 /* UIViewController+.swift in Sources */,
 				9C178540229E745900744507 /* InforRestaurantRequest.swift in Sources */,
 				9C17853C229E745900744507 /* APIUrls.swift in Sources */,
-				9C178526229E745900744507 /* UISearchBar+.swift in Sources */,
 				9C17853A229E745900744507 /* ReviewResponse.swift in Sources */,
 				9C178541229E745900744507 /* ErrorResponse.swift in Sources */,
 				9C178543229E745900744507 /* Reviews.swift in Sources */,
