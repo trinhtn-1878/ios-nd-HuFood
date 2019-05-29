@@ -5,6 +5,7 @@
 //  Created by nguyen.the.trinh on 5/24/19.
 //  Copyright © 2019 nguyen.the.trinh. All rights reserved.
 //
+
 import Foundation
 
 final class ReviewsRequest: BaseRequest {

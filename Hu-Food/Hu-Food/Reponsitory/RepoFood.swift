@@ -34,6 +34,7 @@ final class RepoFoodIplm: RepoFood {
             }
         }
     }
+    
     func fetchInforRestaurant(id: String, completion: @escaping (BaseResult<RestDetail>) -> Void) {
         let input = InforRestaurantRequest(id: id)
         api?.request(input: input) { (object: RestDetail?, error) in
@@ -46,6 +47,7 @@ final class RepoFoodIplm: RepoFood {
             }
         }
     }
+    
     func fetchReviews(id: String, completion: @escaping (BaseResult<ReviewResponse>) -> Void) {
         let input = ReviewsRequest(id: id)
         api?.request(input: input) { (object: ReviewResponse?, error) in

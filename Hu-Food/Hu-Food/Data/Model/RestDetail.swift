@@ -19,6 +19,7 @@ struct RestDetail {
     var location: [String]
     var imageUrl: String
 }
+
 extension RestDetail {
     init() {
         self.init(
@@ -34,6 +35,7 @@ extension RestDetail {
         )
     }
 }
+
 extension RestDetail: Mappable {
     init?(map: Map) {
         self.init()

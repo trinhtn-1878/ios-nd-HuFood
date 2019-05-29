@@ -15,6 +15,7 @@ struct RestSearchDetail {
     var distance: Double
     var imageUrl: String
 }
+
 extension RestSearchDetail {
     init() {
         self.init(
@@ -26,6 +27,7 @@ extension RestSearchDetail {
         )
     }
 }
+
 extension RestSearchDetail: Mappable {
     init?(map: Map) {
         self.init()
