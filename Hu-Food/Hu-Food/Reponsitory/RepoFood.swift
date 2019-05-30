@@ -7,7 +7,7 @@
 //
 
 protocol FoodRepositoryType {
-    func fetchNearFood(longitude: String, latitude: String, offset: Int, completion: @escaping (BaseResult<FoodResponse>) -> Void)
+    func fetchNearFood(longitude: String, latitude: String, offset: Int, term: String, completion: @escaping (BaseResult<FoodResponse>) -> Void)
     func fetchInforRestaurant(id: String, completion: @escaping (BaseResult<RestDetail>) -> Void)
     func fetchReviews(id: String, completion: @escaping (BaseResult<ReviewResponse>) -> Void )
 }
@@ -19,8 +19,8 @@ final class FoodRepository: FoodRepositoryType {
         self.api = api
     }
     
-    func fetchNearFood(longitude: String, latitude: String, offset: Int, completion: @escaping (BaseResult<FoodResponse>) -> Void) {
-        let input = FoodRequest(longitude: longitude, latitude: latitude, offset: offset)
+    func fetchNearFood(longitude: String, latitude: String, offset: Int, term: String, completion: @escaping (BaseResult<FoodResponse>) -> Void) {
+        let input = FoodRequest(longitude: longitude, latitude: latitude, offset: offset, term: term)
         api?.request(input: input) { (object: FoodResponse?, error) in
             if let object = object {
                 completion(.success(object))
