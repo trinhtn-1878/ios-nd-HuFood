@@ -229,6 +229,47 @@
             </objects>
             <point key="canvasLocation" x="1681" y="88"/>
         </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="oF3-hr-B2d">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewController" id="TFZ-Me-Ouf" customClass="DetailViewController" customModule="Hu_Food" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5iW-sJ-KrL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J8p-5U-t1x">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="P5c-L1-IP5">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="448"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="P5c-L1-IP5" secondAttribute="trailing" id="Bdz-Xx-BQw"/>
+                                    <constraint firstAttribute="bottom" secondItem="P5c-L1-IP5" secondAttribute="bottom" id="CFV-0H-MJZ"/>
+                                    <constraint firstItem="P5c-L1-IP5" firstAttribute="width" secondItem="J8p-5U-t1x" secondAttribute="width" id="FqO-l6-4tR"/>
+                                    <constraint firstItem="P5c-L1-IP5" firstAttribute="leading" secondItem="J8p-5U-t1x" secondAttribute="leading" id="HX4-B8-2WG"/>
+                                    <constraint firstItem="P5c-L1-IP5" firstAttribute="top" secondItem="J8p-5U-t1x" secondAttribute="top" id="Qwc-xF-zwQ"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="J8p-5U-t1x" firstAttribute="leading" secondItem="KcU-XW-Jbz" secondAttribute="leading" id="1ca-P2-8Hs"/>
+                            <constraint firstItem="KcU-XW-Jbz" firstAttribute="trailing" secondItem="J8p-5U-t1x" secondAttribute="trailing" id="4oE-s4-ePH"/>
+                            <constraint firstItem="J8p-5U-t1x" firstAttribute="top" secondItem="KcU-XW-Jbz" secondAttribute="top" id="Eeb-WT-2tj"/>
+                            <constraint firstItem="J8p-5U-t1x" firstAttribute="top" secondItem="KcU-XW-Jbz" secondAttribute="top" id="FTe-Ve-ceH"/>
+                            <constraint firstItem="J8p-5U-t1x" firstAttribute="width" secondItem="5iW-sJ-KrL" secondAttribute="width" id="onf-IX-KIL"/>
+                            <constraint firstItem="P5c-L1-IP5" firstAttribute="height" secondItem="5iW-sJ-KrL" secondAttribute="height" multiplier="1:2" id="pKt-kZ-dlL"/>
+                            <constraint firstItem="KcU-XW-Jbz" firstAttribute="bottom" secondItem="J8p-5U-t1x" secondAttribute="bottom" id="zhA-K5-b6u"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="KcU-XW-Jbz"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xtk-og-itr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2787" y="74"/>
+        </scene>
     </scenes>
     <resources>
         <image name="information" width="24" height="24"/>

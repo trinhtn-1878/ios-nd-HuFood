@@ -46,6 +46,7 @@
 		9CE9AA24229F674F001184C8 /* RestSearchDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE9A9F8229F674F001184C8 /* RestSearchDetail.swift */; };
 		9CE9AA25229F674F001184C8 /* RestDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE9A9F9229F674F001184C8 /* RestDetail.swift */; };
 		9CE9AA26229F674F001184C8 /* CategoryFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE9A9FA229F674F001184C8 /* CategoryFood.swift */; };
+		9CE9AA2A229F7C74001184C8 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE9AA29229F7C74001184C8 /* DetailViewController.swift */; };
 		BCBC8A61EE1B3E4940429215 /* Pods_Hu_Food.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C293294903A0A54BA7F618E4 /* Pods_Hu_Food.framework */; };
 /* End PBXBuildFile section */
 
@@ -96,6 +97,7 @@
 		9CE9A9FA229F674F001184C8 /* CategoryFood.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryFood.swift; sourceTree = "<group>"; };
 		9CE9A9FB229F674F001184C8 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		9CE9A9FC229F674F001184C8 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9CE9AA29229F7C74001184C8 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		B200D943C0BD97999558A256 /* Pods-Hu-FoodUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hu-FoodUITests.debug.xcconfig"; path = "Target Support Files/Pods-Hu-FoodUITests/Pods-Hu-FoodUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C293294903A0A54BA7F618E4 /* Pods_Hu_Food.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hu_Food.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F53A695A1FE7C5AEA9306E2A /* Pods-Hu-FoodTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hu-FoodTests.debug.xcconfig"; path = "Target Support Files/Pods-Hu-FoodTests/Pods-Hu-FoodTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 		9CE9A9C8229F674F001184C8 /* Scences */ = {
 			isa = PBXGroup;
 			children = (
+				9CE9AA28229F7C37001184C8 /* Detail */,
 				9CE9A9C9229F674F001184C8 /* Storyboard */,
 				9CE9A9CE229F674F001184C8 /* User */,
 				9CE9A9D0229F674F001184C8 /* Search */,
@@ -337,6 +340,14 @@
 				9CE9A9FA229F674F001184C8 /* CategoryFood.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		9CE9AA28229F7C37001184C8 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				9CE9AA29229F7C74001184C8 /* DetailViewController.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		B3455B3DBD6E94F24BD2DA4C /* Pods */ = {
@@ -515,6 +526,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CE9AA2A229F7C74001184C8 /* DetailViewController.swift in Sources */,
 				9CE9AA1C229F674F001184C8 /* ReviewsRequest.swift in Sources */,
 				9CE9AA09229F674F001184C8 /* UserViewController.swift in Sources */,
 				9CE9AA1F229F674F001184C8 /* InforRestaurantRequest.swift in Sources */,
