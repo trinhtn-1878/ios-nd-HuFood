@@ -9,7 +9,8 @@
 import UIKit
 
 final class DetailViewController: UIViewController {
-
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configView()
@@ -30,7 +31,24 @@ final class DetailViewController: UIViewController {
     }
     
     func configView() {
+        tableView.do {
+            $0.delegate = self
+            $0.dataSource = self
+            $0.register(UITableViewCell .classForCoder(), forCellReuseIdentifier: "Celll")
+            $0.sizeToFit()
+        }
+    }
+}
+
+extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Celll", for: indexPath)
         
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
     }
 }
 
