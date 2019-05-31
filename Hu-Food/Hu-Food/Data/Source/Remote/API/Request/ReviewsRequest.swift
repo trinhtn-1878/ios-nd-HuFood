@@ -6,8 +6,6 @@
 //  Copyright © 2019 nguyen.the.trinh. All rights reserved.
 //
 
-import Foundation
-
 final class ReviewsRequest: BaseRequest {
     
     required init(id: String) {

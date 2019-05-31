@@ -9,7 +9,7 @@
 import ObjectMapper
 
 struct Restaurant {
-    var id: Int
+    var id: String
     var name: String
     var transactions: [String]
     var distance: Double
@@ -17,19 +17,23 @@ struct Restaurant {
     var address: Address?
     var rating: Double
     var imageUrl: String
+    var phone: String
+    var price: String
 }
 
 extension Restaurant {
     init() {
         self.init(
-            id: 0,
+            id: "",
             name: "",
             transactions: [],
             distance: 0,
             categoryFood: [],
             address: Address(),
             rating: 0,
-            imageUrl: ""
+            imageUrl: "",
+            phone: "",
+            price: ""
         )
     }
 }
@@ -48,5 +52,7 @@ extension Restaurant: Mappable {
         imageUrl <- map["image_url"]
         categoryFood <- map["categories"]
         address <- map["location"]
+        phone <- map["phone"]
+        price <- map["price"]
     }
 }

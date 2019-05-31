@@ -97,6 +97,12 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         return restaurants.count
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailVC = DetailRestaurantVC.instantiate()
+        detailVC.restaurant = restaurants[indexPath.row]
+        navigationController?.pushViewController(detailVC, animated: true)
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: SearchResultCell = tableView.dequeueReusableCell(for: indexPath)
         cell.setRestDetail(rest: restaurants[indexPath.row])
