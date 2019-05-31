@@ -6,24 +6,21 @@
 //  Copyright © 2019 nguyen.the.trinh. All rights reserved.
 //
 
-import Foundation
-
-protocol RepoFood {
-    func fetchNearFood(location: String, completion: @escaping (BaseResult<FoodResponse>) -> Void)
+protocol FoodRepositoryType {
+    func fetchNearFood(longitude: String, latitude: String, offset: Int, completion: @escaping (BaseResult<FoodResponse>) -> Void)
     func fetchInforRestaurant(id: String, completion: @escaping (BaseResult<RestDetail>) -> Void)
     func fetchReviews(id: String, completion: @escaping (BaseResult<ReviewResponse>) -> Void )
 }
 
-final class RepoFoodIplm: RepoFood {
-    
+final class FoodRepository: FoodRepositoryType {
     private var api: APIService?
     
     required init(api: APIService) {
         self.api = api
     }
     
-    func fetchNearFood(location: String, completion: @escaping (BaseResult<FoodResponse>) -> Void) {
-        let input = FoodRequest(location: location)
+    func fetchNearFood(longitude: String, latitude: String, offset: Int, completion: @escaping (BaseResult<FoodResponse>) -> Void) {
+        let input = FoodRequest(longitude: longitude, latitude: latitude, offset: offset)
         api?.request(input: input) { (object: FoodResponse?, error) in
             if let object = object {
                 completion(.success(object))

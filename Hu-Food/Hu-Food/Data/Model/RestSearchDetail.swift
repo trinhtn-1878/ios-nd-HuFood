@@ -8,27 +8,29 @@
 
 import ObjectMapper
 
-struct RestSearchDetail {
+struct Restaurant {
     var id: Int
     var name: String
     var transactions: [String]
     var distance: Double
+    var categoryFood: [CategoryFood]
     var imageUrl: String
 }
 
-extension RestSearchDetail {
+extension Restaurant {
     init() {
         self.init(
             id: 0,
             name: "",
             transactions: [],
             distance: 0,
+            categoryFood: [],
             imageUrl: ""
         )
     }
 }
 
-extension RestSearchDetail: Mappable {
+extension Restaurant: Mappable {
     init?(map: Map) {
         self.init()
     }
@@ -39,5 +41,6 @@ extension RestSearchDetail: Mappable {
         transactions <- map["transactions"]
         distance <- map["distance"]
         imageUrl <- map["image_url"]
+        categoryFood <- map["categories"]
     }
 }

@@ -12,6 +12,7 @@ protocol UserRepositoryType {
     func signIn(email: String, password: String, completion: @escaping(AuthDataResult) -> Void)
     func register(email: String, password: String, name: String, completion: @escaping(AuthDataResult) -> Void)
     func signOut(completion: @escaping() -> Void)
+    func getCurrentUserName(completion: @escaping(String) -> Void)
     func getCurrentUser() -> User?
 }
 
@@ -60,6 +61,18 @@ final class UserRepository: UserRepositoryType {
             completion()
         } catch {
             self.errorHandleShow(error: BaseError.authFailure(error: error))
+        }
+    }
+    
+    func getCurrentUserName(completion: @escaping (String) -> Void) {
+        let ref = Database.database().reference()
+        guard let userID = Auth.auth().currentUser?.uid else {
+            return
+        }
+        ref.child("users").child(userID).observeSingleEvent(of: .value) { (snapshot) in
+            let value = snapshot.value as? NSDictionary
+            let name = value?["name"] as? String ?? ""
+            completion(name)
         }
     }
     
