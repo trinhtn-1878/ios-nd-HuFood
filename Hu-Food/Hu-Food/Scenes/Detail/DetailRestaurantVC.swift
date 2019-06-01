@@ -80,6 +80,12 @@ final class DetailRestaurantVC: UIViewController {
                               placeholder: UIImage(named: "imagePlaceHolder"))
         inforRestaurantView.setRestaurant(rest: restaurant)
     }
+    
+    @IBAction private func handleMapTapped(_ sender: Any) {
+        let mapVC = MapViewController.instantiate()
+        mapVC.restaurants = restaurant
+        navigationController?.pushViewController(mapVC, animated: true)
+    }
 }
 
 extension DetailRestaurantVC: UITableViewDelegate, UITableViewDataSource {

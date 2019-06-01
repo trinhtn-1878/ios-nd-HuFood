@@ -45,6 +45,8 @@
 		9CE9AA30229FE3B3001184C8 /* imagePlaceHolder.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CE9AA2F229FE3B3001184C8 /* imagePlaceHolder.png */; };
 		9CE9AA32229FEC84001184C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C1784E8229E745900744507 /* Assets.xcassets */; };
 		BCBC8A61EE1B3E4940429215 /* Pods_Hu_Food.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C293294903A0A54BA7F618E4 /* Pods_Hu_Food.framework */; };
+		CF26649B22A2C3170016F951 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF26649A22A2C3170016F951 /* MapViewController.swift */; };
+		CF26649D22A2CB6F0016F951 /* RestCoordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF26649C22A2CB6F0016F951 /* RestCoordinates.swift */; };
 		CF5053A622A0D49F00E1E01C /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5053A522A0D49F00E1E01C /* Address.swift */; };
 		CF5053AB22A0D69900E1E01C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5053A822A0D69900E1E01C /* SearchViewController.swift */; };
 		CF5053AC22A0D69900E1E01C /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5053A922A0D69900E1E01C /* SearchResultCell.swift */; };
@@ -106,6 +108,8 @@
 		9CE9AA2F229FE3B3001184C8 /* imagePlaceHolder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imagePlaceHolder.png; sourceTree = "<group>"; };
 		B200D943C0BD97999558A256 /* Pods-Hu-FoodUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hu-FoodUITests.debug.xcconfig"; path = "Target Support Files/Pods-Hu-FoodUITests/Pods-Hu-FoodUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C293294903A0A54BA7F618E4 /* Pods_Hu_Food.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hu_Food.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF26649A22A2C3170016F951 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		CF26649C22A2CB6F0016F951 /* RestCoordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestCoordinates.swift; sourceTree = "<group>"; };
 		CF5053A522A0D49F00E1E01C /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		CF5053A822A0D69900E1E01C /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		CF5053A922A0D69900E1E01C /* SearchResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
@@ -171,6 +175,7 @@
 		9C1784F1229E745900744507 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				CF26649922A2C2D60016F951 /* Map */,
 				CFA62B3222A13DFD002840DE /* Detail */,
 				CF5053A722A0D69900E1E01C /* Search */,
 				9C1784F2229E745900744507 /* Storyboard */,
@@ -322,6 +327,7 @@
 				9C17851D229E745900744507 /* RestDetail.swift */,
 				9C17851E229E745900744507 /* CategoryFood.swift */,
 				CFA62B3F22A182DC002840DE /* UserReviews.swift */,
+				CF26649C22A2CB6F0016F951 /* RestCoordinates.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -355,6 +361,14 @@
 				227179980246DA5798A0018E /* Pods-Hu-FoodUITests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		CF26649922A2C2D60016F951 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				CF26649A22A2C3170016F951 /* MapViewController.swift */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 		CF5053A722A0D69900E1E01C /* Search */ = {
@@ -529,6 +543,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C17852E229E745900744507 /* LoginViewController.swift in Sources */,
+				CF26649D22A2CB6F0016F951 /* RestCoordinates.swift in Sources */,
 				9C17853B229E745900744507 /* APIService.swift in Sources */,
 				CFA62B4022A182DC002840DE /* UserReviews.swift in Sources */,
 				CFA62B3822A1408D002840DE /* InforRestaurantView.swift in Sources */,
@@ -547,6 +562,7 @@
 				9C17852D229E745900744507 /* UserViewController.swift in Sources */,
 				9C17853D229E745900744507 /* ReviewsRequest.swift in Sources */,
 				CF5053A622A0D49F00E1E01C /* Address.swift in Sources */,
+				CF26649B22A2C3170016F951 /* MapViewController.swift in Sources */,
 				9C178537229E745900744507 /* UserDataResult.swift in Sources */,
 				CFA62B3D22A17F1D002840DE /* ReviewCell.swift in Sources */,
 				9C178533229E745900744507 /* RepoFood.swift in Sources */,

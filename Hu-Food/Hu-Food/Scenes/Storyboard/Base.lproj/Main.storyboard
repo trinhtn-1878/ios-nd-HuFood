@@ -221,7 +221,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5qJ-px-Fl6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2439" y="88"/>
+            <point key="canvasLocation" x="2036" y="88"/>
         </scene>
         <!--Detail RestaurantVC-->
         <scene sceneID="Gtz-JZ-IQQ">
@@ -302,6 +302,9 @@
                                         <state key="normal" title="Map">
                                             <color key="titleColor" red="0.92205345809999995" green="0.92205345809999995" blue="0.92205345809999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="handleMapTapped:" destination="XaF-Pz-3zE" eventType="touchUpInside" id="AUQ-4G-jsF"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yu8-NG-CkH">
                                         <rect key="frame" x="207" y="7.5" width="207" height="34"/>
@@ -347,7 +350,57 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jjR-6R-Yct" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3524.6376811594205" y="94.419642857142847"/>
+            <point key="canvasLocation" x="2887" y="88"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="ORU-fN-Xhu">
+            <objects>
+                <viewController storyboardIdentifier="MapViewController" id="oMJ-fu-2XU" customClass="MapViewController" customModule="Hu_Food" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fGf-X2-VJc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="oab-y2-WQL">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2qU-37-trG">
+                                <rect key="frame" x="138" y="818" width="138" height="44"/>
+                                <color key="backgroundColor" red="0.99925023319999995" green="0.14299249650000001" blue="0.3221951723" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="EqW-1O-rLh"/>
+                                </constraints>
+                                <state key="normal" title="Direction">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="handleDirectionTapped:" destination="oMJ-fu-2XU" eventType="touchUpInside" id="Ew6-Kp-38b"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="2qU-37-trG" firstAttribute="centerX" secondItem="fGf-X2-VJc" secondAttribute="centerX" id="4Yg-IK-xIa"/>
+                            <constraint firstItem="2qU-37-trG" firstAttribute="width" secondItem="fGf-X2-VJc" secondAttribute="width" multiplier="1:3" id="6fK-kU-1IP"/>
+                            <constraint firstItem="oab-y2-WQL" firstAttribute="leading" secondItem="9Uo-BD-GCi" secondAttribute="leading" id="GEC-5m-XA6"/>
+                            <constraint firstItem="oab-y2-WQL" firstAttribute="top" secondItem="9Uo-BD-GCi" secondAttribute="top" id="JM0-0g-eXW"/>
+                            <constraint firstItem="9Uo-BD-GCi" firstAttribute="bottom" secondItem="2qU-37-trG" secondAttribute="bottom" id="dAx-Ky-wWx"/>
+                            <constraint firstItem="9Uo-BD-GCi" firstAttribute="bottom" secondItem="oab-y2-WQL" secondAttribute="bottom" id="eU0-Xu-9nR"/>
+                            <constraint firstItem="9Uo-BD-GCi" firstAttribute="trailing" secondItem="oab-y2-WQL" secondAttribute="trailing" id="oUI-jm-LJt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9Uo-BD-GCi"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="oab-y2-WQL" id="gvQ-Ks-oMn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yfk-gG-FGB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3990" y="88"/>
         </scene>
     </scenes>
     <resources>
