@@ -54,7 +54,7 @@ final class UserRepository: UserRepositoryType {
             })
         }
     }
-
+    
     func signOut(completion: @escaping () -> Void) {
         do {
             try Auth.auth().signOut()

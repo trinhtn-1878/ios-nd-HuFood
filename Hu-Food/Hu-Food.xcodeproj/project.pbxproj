@@ -37,6 +37,7 @@
 		9C178544229E745900744507 /* RestSearchDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C17851C229E745900744507 /* RestSearchDetail.swift */; };
 		9C178545229E745900744507 /* RestDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C17851D229E745900744507 /* RestDetail.swift */; };
 		9C178546229E745900744507 /* CategoryFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C17851E229E745900744507 /* CategoryFood.swift */; };
+		9C2DCCA722A6522D003992BF /* ReviewRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2DCCA622A6522D003992BF /* ReviewRepository.swift */; };
 		9C8E6E6E229E842B009FCE9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C1784F3229E745900744507 /* Main.storyboard */; };
 		9C8E6E6F229E842B009FCE9A /* LoginAndRegister.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C1784F6229E745900744507 /* LoginAndRegister.storyboard */; };
 		9C8E6E70229E8457009FCE9A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C1784E9229E745900744507 /* GoogleService-Info.plist */; };
@@ -51,6 +52,7 @@
 		CF5053AB22A0D69900E1E01C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5053A822A0D69900E1E01C /* SearchViewController.swift */; };
 		CF5053AC22A0D69900E1E01C /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5053A922A0D69900E1E01C /* SearchResultCell.swift */; };
 		CF5053AD22A0D69900E1E01C /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF5053AA22A0D69900E1E01C /* SearchResultCell.xib */; };
+		CF89925822A4157700C3224A /* WritingReviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF89925722A4157700C3224A /* WritingReviewVC.swift */; };
 		CFA62B3422A13EC5002840DE /* InforRestaurantView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFA62B3322A13EC5002840DE /* InforRestaurantView.xib */; };
 		CFA62B3622A13EF1002840DE /* DetailRestaurantVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA62B3522A13EF1002840DE /* DetailRestaurantVC.swift */; };
 		CFA62B3822A1408D002840DE /* InforRestaurantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA62B3722A1408D002840DE /* InforRestaurantView.swift */; };
@@ -103,6 +105,7 @@
 		9C17851E229E745900744507 /* CategoryFood.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryFood.swift; sourceTree = "<group>"; };
 		9C17851F229E745900744507 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		9C178520229E745900744507 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C2DCCA622A6522D003992BF /* ReviewRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewRepository.swift; sourceTree = "<group>"; };
 		9CD16441229655F7007CAAA0 /* Hu-Food.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hu-Food.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CE9AA2B229F84BA001184C8 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		9CE9AA2F229FE3B3001184C8 /* imagePlaceHolder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imagePlaceHolder.png; sourceTree = "<group>"; };
@@ -114,6 +117,7 @@
 		CF5053A822A0D69900E1E01C /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		CF5053A922A0D69900E1E01C /* SearchResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		CF5053AA22A0D69900E1E01C /* SearchResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
+		CF89925722A4157700C3224A /* WritingReviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingReviewVC.swift; sourceTree = "<group>"; };
 		CFA62B3322A13EC5002840DE /* InforRestaurantView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InforRestaurantView.xib; sourceTree = "<group>"; };
 		CFA62B3522A13EF1002840DE /* DetailRestaurantVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRestaurantVC.swift; sourceTree = "<group>"; };
 		CFA62B3722A1408D002840DE /* InforRestaurantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InforRestaurantView.swift; sourceTree = "<group>"; };
@@ -175,6 +179,7 @@
 		9C1784F1229E745900744507 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				CF89925622A4151400C3224A /* WriteReview */,
 				CF26649922A2C2D60016F951 /* Map */,
 				CFA62B3222A13DFD002840DE /* Detail */,
 				CF5053A722A0D69900E1E01C /* Search */,
@@ -236,6 +241,7 @@
 			children = (
 				9C178502229E745900744507 /* RepoFood.swift */,
 				9C178503229E745900744507 /* UserReponsitory.swift */,
+				9C2DCCA622A6522D003992BF /* ReviewRepository.swift */,
 			);
 			path = Reponsitory;
 			sourceTree = "<group>";
@@ -381,6 +387,14 @@
 			name = Search;
 			path = "Hu-Food/Scenes/Search";
 			sourceTree = SOURCE_ROOT;
+		};
+		CF89925622A4151400C3224A /* WriteReview */ = {
+			isa = PBXGroup;
+			children = (
+				CF89925722A4157700C3224A /* WritingReviewVC.swift */,
+			);
+			path = WriteReview;
+			sourceTree = "<group>";
 		};
 		CFA62B3222A13DFD002840DE /* Detail */ = {
 			isa = PBXGroup;
@@ -551,6 +565,7 @@
 				9C17852F229E745900744507 /* RegisterViewController.swift in Sources */,
 				9C178527229E745900744507 /* UIView+.swift in Sources */,
 				9C178535229E745900744507 /* CustomRequestAdapter.swift in Sources */,
+				9C2DCCA722A6522D003992BF /* ReviewRepository.swift in Sources */,
 				CF5053AC22A0D69900E1E01C /* SearchResultCell.swift in Sources */,
 				9C178544229E745900744507 /* RestSearchDetail.swift in Sources */,
 				9C17853F229E745900744507 /* FoodRequest.swift in Sources */,
@@ -568,6 +583,7 @@
 				9C178533229E745900744507 /* RepoFood.swift in Sources */,
 				9C178545229E745900744507 /* RestDetail.swift in Sources */,
 				9CE9AA2C229F84BA001184C8 /* UIColorExtension.swift in Sources */,
+				CF89925822A4157700C3224A /* WritingReviewVC.swift in Sources */,
 				9C178521229E745900744507 /* AppDelegate.swift in Sources */,
 				9C178531229E745900744507 /* RestaurantCell.swift in Sources */,
 				9C178546229E745900744507 /* CategoryFood.swift in Sources */,
