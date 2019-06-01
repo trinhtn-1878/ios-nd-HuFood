@@ -134,6 +134,95 @@
             </objects>
             <point key="canvasLocation" x="1135" y="88"/>
         </scene>
+        <!--Search View Controller-->
+        <scene sceneID="zQc-SZ-M3A">
+            <objects>
+                <viewController storyboardIdentifier="SearchViewController" id="PND-EF-gd4" customClass="SearchViewController" customModule="Hu_Food" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WLw-4O-byg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fGh-rj-Jyf">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="84"/>
+                                <subviews>
+                                    <searchBar clipsSubviews="YES" contentMode="redraw" placeholder="Name, category, ..." translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="imd-kV-dUK">
+                                        <rect key="frame" x="60" y="40" width="354" height="44"/>
+                                        <color key="backgroundColor" red="0.99925023319999995" green="0.14299249650000001" blue="0.3221951723" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="2mk-oI-faL"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="barTintColor" red="0.99925023319999995" green="0.14299249650000001" blue="0.3221951723" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <scopeButtonTitles>
+                                            <string>Title</string>
+                                            <string>Title</string>
+                                        </scopeButtonTitles>
+                                    </searchBar>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QTl-pa-Wtp">
+                                        <rect key="frame" x="0.0" y="40" width="60" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="DSJ-dg-Y6q"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Back">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="touchBack:" destination="PND-EF-gd4" eventType="touchUpInside" id="Tu4-GE-9cl"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.99925023319999995" green="0.14299249650000001" blue="0.3221951723" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="QTl-pa-Wtp" secondAttribute="bottom" id="AXq-jT-QyG"/>
+                                    <constraint firstItem="imd-kV-dUK" firstAttribute="leading" secondItem="fGh-rj-Jyf" secondAttribute="leading" constant="60" id="QUj-sT-cZZ"/>
+                                    <constraint firstItem="imd-kV-dUK" firstAttribute="width" secondItem="fGh-rj-Jyf" secondAttribute="width" constant="-60" id="Vab-Mo-0J6"/>
+                                    <constraint firstAttribute="bottom" secondItem="imd-kV-dUK" secondAttribute="bottom" id="cYq-QO-b9c"/>
+                                    <constraint firstAttribute="height" constant="84" id="dS8-6R-NWi"/>
+                                    <constraint firstItem="imd-kV-dUK" firstAttribute="leading" secondItem="QTl-pa-Wtp" secondAttribute="trailing" id="fvV-PV-zt7"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="84" id="kNd-wy-bRx"/>
+                                    <constraint firstItem="QTl-pa-Wtp" firstAttribute="leading" secondItem="fGh-rj-Jyf" secondAttribute="leading" id="yAO-tQ-xC2"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CLN-Vo-OQh">
+                                <rect key="frame" x="0.0" y="84" width="414" height="778"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchCell" id="GRy-m4-8eq">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GRy-m4-8eq" id="aLu-Ne-13L">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fGh-rj-Jyf" firstAttribute="leading" secondItem="SF5-FD-Q01" secondAttribute="leading" id="1kC-Ig-hpd"/>
+                            <constraint firstItem="fGh-rj-Jyf" firstAttribute="width" secondItem="WLw-4O-byg" secondAttribute="width" id="7uR-zd-BxT"/>
+                            <constraint firstItem="fGh-rj-Jyf" firstAttribute="trailing" secondItem="SF5-FD-Q01" secondAttribute="trailing" id="9RB-wN-5So"/>
+                            <constraint firstItem="CLN-Vo-OQh" firstAttribute="top" secondItem="fGh-rj-Jyf" secondAttribute="bottom" id="SZO-5S-Z3i"/>
+                            <constraint firstItem="fGh-rj-Jyf" firstAttribute="top" secondItem="WLw-4O-byg" secondAttribute="top" id="YbO-bb-baV"/>
+                            <constraint firstItem="SF5-FD-Q01" firstAttribute="bottom" secondItem="CLN-Vo-OQh" secondAttribute="bottom" id="kS2-eB-02O"/>
+                            <constraint firstItem="SF5-FD-Q01" firstAttribute="trailing" secondItem="CLN-Vo-OQh" secondAttribute="trailing" id="kzE-A5-acb"/>
+                            <constraint firstItem="CLN-Vo-OQh" firstAttribute="leading" secondItem="SF5-FD-Q01" secondAttribute="leading" id="yY4-xd-AzA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="SF5-FD-Q01"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnback" destination="QTl-pa-Wtp" id="QO4-VW-Pbq"/>
+                        <outlet property="searchbar" destination="imd-kV-dUK" id="Zox-VS-HG1"/>
+                        <outlet property="tableView" destination="CLN-Vo-OQh" id="Dyq-2W-gdB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5qJ-px-Fl6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2439" y="88"/>
+        </scene>
     </scenes>
     <resources>
         <image name="user" width="24" height="24"/>

@@ -10,12 +10,13 @@ import Foundation
 
 final class FoodRequest: BaseRequest {
     
-    required init(longitude: String, latitude: String, offset: Int) {
+    required init(longitude: String, latitude: String, offset: Int, term: String) {
         let parameters: [String: Any]  = [
             "latitude": latitude,
             "longitude": longitude,
             "offset": offset,
-            "sort_by": "distance"
+            "sort_by": "distance",
+            "term": term
         ]
         super.init(url: Urls.getRestSearchList, requestType: .get, parameters: parameters)
     }

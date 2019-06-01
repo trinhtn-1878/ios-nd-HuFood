@@ -8,7 +8,6 @@
 
 import Firebase
 import CoreLocation
-import MapKit
 
 final class MainViewController: UIViewController {
     @IBOutlet private weak var collectionView: UICollectionView!
@@ -52,6 +51,7 @@ final class MainViewController: UIViewController {
     }
     
     func configView() {
+        searchbar.delegate = self
         collectionView.do {
             $0.delegate = self
             $0.dataSource = self
@@ -62,7 +62,8 @@ final class MainViewController: UIViewController {
     func fetchDataSearch(longitude: String, latitude: String) {
         repoRestSearch.fetchNearFood(longitude: longitude,
                                      latitude: latitude,
-                                     offset: restaurants.count) { (result) in
+                                     offset: restaurants.count,
+                                     term: "") { (result) in
                                         switch result {
                                         case .success(let response):
                                             guard let data = response?.restaurants else { return }
@@ -78,6 +79,17 @@ final class MainViewController: UIViewController {
     @IBAction private func handleUserTapped(_ sender: Any) {
         let userVC = UserViewController.instantiate()
         navigationController?.pushViewController(userVC, animated: true)
+    }
+}
+
+extension MainViewController: UISearchBarDelegate {
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        let searchVC = SearchViewController.instantiate()
+        self.navigationController?.viewControllers = [searchVC]
+        searchBar.resignFirstResponder()
+        guard let locValue: CLLocationCoordinate2D = locationManager.location?.coordinate else { return }
+        searchVC.location.updateValue(locValue.latitude.description, forKey: "latitude")
+        searchVC.location.updateValue(locValue.longitude.description, forKey: "longitude")
     }
 }
 

@@ -45,6 +45,10 @@
 		9CE9AA30229FE3B3001184C8 /* imagePlaceHolder.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CE9AA2F229FE3B3001184C8 /* imagePlaceHolder.png */; };
 		9CE9AA32229FEC84001184C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C1784E8229E745900744507 /* Assets.xcassets */; };
 		BCBC8A61EE1B3E4940429215 /* Pods_Hu_Food.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C293294903A0A54BA7F618E4 /* Pods_Hu_Food.framework */; };
+		CF5053A622A0D49F00E1E01C /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5053A522A0D49F00E1E01C /* Address.swift */; };
+		CF5053AB22A0D69900E1E01C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5053A822A0D69900E1E01C /* SearchViewController.swift */; };
+		CF5053AC22A0D69900E1E01C /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5053A922A0D69900E1E01C /* SearchResultCell.swift */; };
+		CF5053AD22A0D69900E1E01C /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF5053AA22A0D69900E1E01C /* SearchResultCell.xib */; };
 		CFF980E622A02237004873D4 /* RestaurantCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C1784FE229E745900744507 /* RestaurantCell.xib */; };
 /* End PBXBuildFile section */
 
@@ -96,6 +100,10 @@
 		9CE9AA2F229FE3B3001184C8 /* imagePlaceHolder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imagePlaceHolder.png; sourceTree = "<group>"; };
 		B200D943C0BD97999558A256 /* Pods-Hu-FoodUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hu-FoodUITests.debug.xcconfig"; path = "Target Support Files/Pods-Hu-FoodUITests/Pods-Hu-FoodUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C293294903A0A54BA7F618E4 /* Pods_Hu_Food.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hu_Food.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF5053A522A0D49F00E1E01C /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		CF5053A822A0D69900E1E01C /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		CF5053A922A0D69900E1E01C /* SearchResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
+		CF5053AA22A0D69900E1E01C /* SearchResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
 		F53A695A1FE7C5AEA9306E2A /* Pods-Hu-FoodTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hu-FoodTests.debug.xcconfig"; path = "Target Support Files/Pods-Hu-FoodTests/Pods-Hu-FoodTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -151,6 +159,7 @@
 		9C1784F1229E745900744507 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				CF5053A722A0D69900E1E01C /* Search */,
 				9C1784F2229E745900744507 /* Storyboard */,
 				9C1784F7229E745900744507 /* User */,
 				9C1784F9229E745900744507 /* Login&Register */,
@@ -294,6 +303,7 @@
 		9C17851A229E745900744507 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CF5053A522A0D49F00E1E01C /* Address.swift */,
 				9C17851B229E745900744507 /* Reviews.swift */,
 				9C17851C229E745900744507 /* RestSearchDetail.swift */,
 				9C17851D229E745900744507 /* RestDetail.swift */,
@@ -332,6 +342,17 @@
 			);
 			path = Pods;
 			sourceTree = "<group>";
+		};
+		CF5053A722A0D69900E1E01C /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				CF5053A822A0D69900E1E01C /* SearchViewController.swift */,
+				CF5053A922A0D69900E1E01C /* SearchResultCell.swift */,
+				CF5053AA22A0D69900E1E01C /* SearchResultCell.xib */,
+			);
+			name = Search;
+			path = "Hu-Food/Scenes/Search";
+			sourceTree = SOURCE_ROOT;
 		};
 		E5062241151445C268415009 /* Frameworks */ = {
 			isa = PBXGroup;
@@ -404,6 +425,7 @@
 			files = (
 				CFF980E622A02237004873D4 /* RestaurantCell.xib in Resources */,
 				9C8E6E70229E8457009FCE9A /* GoogleService-Info.plist in Resources */,
+				CF5053AD22A0D69900E1E01C /* SearchResultCell.xib in Resources */,
 				9C8E6E71229E8457009FCE9A /* LaunchScreen.storyboard in Resources */,
 				9C8E6E6E229E842B009FCE9A /* Main.storyboard in Resources */,
 				9CE9AA32229FEC84001184C8 /* Assets.xcassets in Resources */,
@@ -484,14 +506,17 @@
 				9C17852F229E745900744507 /* RegisterViewController.swift in Sources */,
 				9C178527229E745900744507 /* UIView+.swift in Sources */,
 				9C178535229E745900744507 /* CustomRequestAdapter.swift in Sources */,
+				CF5053AC22A0D69900E1E01C /* SearchResultCell.swift in Sources */,
 				9C178544229E745900744507 /* RestSearchDetail.swift in Sources */,
 				9C17853F229E745900744507 /* FoodRequest.swift in Sources */,
 				9C178539229E745900744507 /* FoodResponse.swift in Sources */,
 				9C178536229E745900744507 /* BaseResult.swift in Sources */,
 				9C17853E229E745900744507 /* BaseRequest.swift in Sources */,
 				9C178532229E745900744507 /* MainViewController.swift in Sources */,
+				CF5053AB22A0D69900E1E01C /* SearchViewController.swift in Sources */,
 				9C17852D229E745900744507 /* UserViewController.swift in Sources */,
 				9C17853D229E745900744507 /* ReviewsRequest.swift in Sources */,
+				CF5053A622A0D49F00E1E01C /* Address.swift in Sources */,
 				9C178537229E745900744507 /* UserDataResult.swift in Sources */,
 				9C178533229E745900744507 /* RepoFood.swift in Sources */,
 				9C178545229E745900744507 /* RestDetail.swift in Sources */,
