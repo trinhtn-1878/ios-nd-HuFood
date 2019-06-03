@@ -48,7 +48,7 @@ final class DetailRestaurantVC: UIViewController {
         nav.navigationBar.isTranslucent = false
         nav.navigationBar.barTintColor = .customRedColor
         nav.navigationBar.tintColor = .white
-        nav.navigationItem.title = restaurant.name
+        navigationItem.title = restaurant.name
         nav.navigationBar.titleTextAttributes =
             [NSAttributedString.Key.foregroundColor: UIColor.white]
     }
@@ -79,6 +79,12 @@ final class DetailRestaurantVC: UIViewController {
         imageView.kf.setImage(with: URL(string: restaurant.imageUrl),
                               placeholder: UIImage(named: "imagePlaceHolder"))
         inforRestaurantView.setRestaurant(rest: restaurant)
+    }
+    
+    @IBAction private func handleMapTapped(_ sender: Any) {
+        let mapVC = MapViewController.instantiate()
+        mapVC.restaurants = restaurant
+        navigationController?.pushViewController(mapVC, animated: true)
     }
 }
 
