@@ -15,7 +15,7 @@ struct Restaurant {
     var distance: Double
     var categoryFood: [CategoryFood]
     var address: Address?
-    var restCoordinates: RestCoordinates
+    var coordinates: Coordinates
     var rating: Double
     var imageUrl: String
     var phone: String
@@ -31,7 +31,7 @@ extension Restaurant {
             distance: 0,
             categoryFood: [],
             address: Address(),
-            restCoordinates: RestCoordinates(),
+            coordinates: Coordinates(),
             rating: 0,
             imageUrl: "",
             phone: "",
@@ -56,6 +56,6 @@ extension Restaurant: Mappable {
         address <- map["location"]
         phone <- map["phone"]
         price <- map["price"]
-        restCoordinates <- map["coordinates"]
+        coordinates <- map["coordinates"]
     }
 }

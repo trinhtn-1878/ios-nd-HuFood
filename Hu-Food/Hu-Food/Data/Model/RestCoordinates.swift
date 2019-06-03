@@ -8,12 +8,12 @@
 
 import ObjectMapper
 
-struct RestCoordinates {
+struct Coordinates {
     var latitude: Double
     var longitude: Double
 }
 
-extension RestCoordinates {
+extension Coordinates {
     init() {
         self.init(
             latitude: 0,
@@ -22,7 +22,7 @@ extension RestCoordinates {
     }
 }
 
-extension RestCoordinates: Mappable {
+extension Coordinates: Mappable {
     init?(map: Map) {
         self.init()
     }

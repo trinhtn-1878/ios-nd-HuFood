@@ -12,9 +12,9 @@ import  CoreLocation
 
 final class MapViewController: UIViewController {
     @IBOutlet private weak var mapView: MKMapView!
-    var locationManager = CLLocationManager()
+    private var locationManager = CLLocationManager()
     var restaurants: Restaurant!
-    let regionInMeters: Double = 1000
+    let regionInMeters = 1000.0
     let geoCoder = CLGeocoder()
     var directionsArray: [MKDirections] = []
     
@@ -42,8 +42,8 @@ final class MapViewController: UIViewController {
     func addAnnotation() {
         let restaurantPoint = MKPointAnnotation()
         restaurantPoint.title = restaurants.name
-        restaurantPoint.coordinate = CLLocationCoordinate2D(latitude: restaurants.restCoordinates.latitude,
-                                                            longitude: restaurants.restCoordinates.longitude)
+        restaurantPoint.coordinate = CLLocationCoordinate2D(latitude: restaurants.coordinates.latitude,
+                                                            longitude: restaurants.coordinates.longitude)
         mapView.addAnnotation(restaurantPoint)
     }
     
@@ -99,8 +99,8 @@ final class MapViewController: UIViewController {
     }
     
     func getRestaurentLocation(for mapView: MKMapView) -> CLLocation {
-        let latitude = restaurants.restCoordinates.latitude
-        let longitude = restaurants.restCoordinates.longitude
+        let latitude = restaurants.coordinates.latitude
+        let longitude = restaurants.coordinates.longitude
         return CLLocation(latitude: latitude, longitude: longitude)
     }
     

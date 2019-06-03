@@ -48,7 +48,7 @@ final class DetailRestaurantVC: UIViewController {
         nav.navigationBar.isTranslucent = false
         nav.navigationBar.barTintColor = .customRedColor
         nav.navigationBar.tintColor = .white
-        nav.navigationItem.title = restaurant.name
+        navigationItem.title = restaurant.name
         nav.navigationBar.titleTextAttributes =
             [NSAttributedString.Key.foregroundColor: UIColor.white]
     }
