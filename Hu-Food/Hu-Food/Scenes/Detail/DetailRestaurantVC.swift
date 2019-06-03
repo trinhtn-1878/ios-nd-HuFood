@@ -44,16 +44,16 @@ final class DetailRestaurantVC: UIViewController {
             $0.isScrollEnabled = false
             $0.register(cellType: ReviewCell.self)
         }
-        navigationController?.navigationBar.isTranslucent = false
-        navigationController?.navigationBar.barTintColor = .customRedColor
-        navigationController?.navigationBar.tintColor = .white
-        navigationItem.title = restaurant.name
-        navigationController?.navigationBar.titleTextAttributes =
+        guard let nav = navigationController else { return }
+        nav.navigationBar.isTranslucent = false
+        nav.navigationBar.barTintColor = .customRedColor
+        nav.navigationBar.tintColor = .white
+        nav.navigationItem.title = restaurant.name
+        nav.navigationBar.titleTextAttributes =
             [NSAttributedString.Key.foregroundColor: UIColor.white]
     }
     
     func updateHeight() {
-        tableView.updateConstraints()
         tableView.layoutIfNeeded()
         tableViewHeight.constant = tableView.contentSize.height
         contentViewHeight.constant = inforRestaurantView.bounds.height
@@ -89,7 +89,7 @@ extension DetailRestaurantVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: ReviewCell = tableView.dequeueReusableCell(for: indexPath)
-        cell .setData(reviews: reviews[indexPath.row])
+        cell.setData(reviews: reviews[indexPath.row])
         cell.selectionStyle = .none
         return cell
     }

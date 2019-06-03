@@ -17,10 +17,10 @@ final class InforRestaurantView: UIView {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        commoninit()
+        commonInit()
     }
     
-    func commoninit() {
+    func commonInit() {
         Bundle.main.loadNibNamed("InforRestaurantView", owner: self, options: nil)
         addSubview(contentView)
         contentView.frame = bounds
@@ -31,16 +31,8 @@ final class InforRestaurantView: UIView {
         rating.text = "Rating: " + String(rest.rating)
         phoneNumber.text = "Phone Number: " + rest.phone
         price.text = "Price: " + rest.price
-        if let add = rest.address?.address1 {
-            address.text = "Address: " + add
-        } else {
-            address.text = "Address: "
-        }
-        if rest.categoryFood.isEmpty {
-            category.text = ""
-        } else {
-            category.text = rest.categoryFood[0].title
-        }
+        address.text = "Address: " + (rest.address?.address1 ?? "")
+        category.text = rest.categoryFood.isEmpty ? "" : rest.categoryFood[0].title
     }
 }
 
