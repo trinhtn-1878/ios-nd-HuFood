@@ -49,6 +49,12 @@
 		CF5053AB22A0D69900E1E01C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5053A822A0D69900E1E01C /* SearchViewController.swift */; };
 		CF5053AC22A0D69900E1E01C /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5053A922A0D69900E1E01C /* SearchResultCell.swift */; };
 		CF5053AD22A0D69900E1E01C /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF5053AA22A0D69900E1E01C /* SearchResultCell.xib */; };
+		CFA62B3422A13EC5002840DE /* InforRestaurantView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFA62B3322A13EC5002840DE /* InforRestaurantView.xib */; };
+		CFA62B3622A13EF1002840DE /* DetailRestaurantVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA62B3522A13EF1002840DE /* DetailRestaurantVC.swift */; };
+		CFA62B3822A1408D002840DE /* InforRestaurantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA62B3722A1408D002840DE /* InforRestaurantView.swift */; };
+		CFA62B3D22A17F1D002840DE /* ReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA62B3B22A17F1D002840DE /* ReviewCell.swift */; };
+		CFA62B3E22A17F1D002840DE /* ReviewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFA62B3C22A17F1D002840DE /* ReviewCell.xib */; };
+		CFA62B4022A182DC002840DE /* UserReviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA62B3F22A182DC002840DE /* UserReviews.swift */; };
 		CFF980E622A02237004873D4 /* RestaurantCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C1784FE229E745900744507 /* RestaurantCell.xib */; };
 /* End PBXBuildFile section */
 
@@ -104,6 +110,12 @@
 		CF5053A822A0D69900E1E01C /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		CF5053A922A0D69900E1E01C /* SearchResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		CF5053AA22A0D69900E1E01C /* SearchResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
+		CFA62B3322A13EC5002840DE /* InforRestaurantView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InforRestaurantView.xib; sourceTree = "<group>"; };
+		CFA62B3522A13EF1002840DE /* DetailRestaurantVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRestaurantVC.swift; sourceTree = "<group>"; };
+		CFA62B3722A1408D002840DE /* InforRestaurantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InforRestaurantView.swift; sourceTree = "<group>"; };
+		CFA62B3B22A17F1D002840DE /* ReviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCell.swift; sourceTree = "<group>"; };
+		CFA62B3C22A17F1D002840DE /* ReviewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewCell.xib; sourceTree = "<group>"; };
+		CFA62B3F22A182DC002840DE /* UserReviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserReviews.swift; sourceTree = "<group>"; };
 		F53A695A1FE7C5AEA9306E2A /* Pods-Hu-FoodTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hu-FoodTests.debug.xcconfig"; path = "Target Support Files/Pods-Hu-FoodTests/Pods-Hu-FoodTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -159,6 +171,7 @@
 		9C1784F1229E745900744507 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				CFA62B3222A13DFD002840DE /* Detail */,
 				CF5053A722A0D69900E1E01C /* Search */,
 				9C1784F2229E745900744507 /* Storyboard */,
 				9C1784F7229E745900744507 /* User */,
@@ -308,6 +321,7 @@
 				9C17851C229E745900744507 /* RestSearchDetail.swift */,
 				9C17851D229E745900744507 /* RestDetail.swift */,
 				9C17851E229E745900744507 /* CategoryFood.swift */,
+				CFA62B3F22A182DC002840DE /* UserReviews.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -353,6 +367,18 @@
 			name = Search;
 			path = "Hu-Food/Scenes/Search";
 			sourceTree = SOURCE_ROOT;
+		};
+		CFA62B3222A13DFD002840DE /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				CFA62B3522A13EF1002840DE /* DetailRestaurantVC.swift */,
+				CFA62B3722A1408D002840DE /* InforRestaurantView.swift */,
+				CFA62B3322A13EC5002840DE /* InforRestaurantView.xib */,
+				CFA62B3B22A17F1D002840DE /* ReviewCell.swift */,
+				CFA62B3C22A17F1D002840DE /* ReviewCell.xib */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
 		};
 		E5062241151445C268415009 /* Frameworks */ = {
 			isa = PBXGroup;
@@ -424,6 +450,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFF980E622A02237004873D4 /* RestaurantCell.xib in Resources */,
+				CFA62B3E22A17F1D002840DE /* ReviewCell.xib in Resources */,
+				CFA62B3422A13EC5002840DE /* InforRestaurantView.xib in Resources */,
 				9C8E6E70229E8457009FCE9A /* GoogleService-Info.plist in Resources */,
 				CF5053AD22A0D69900E1E01C /* SearchResultCell.xib in Resources */,
 				9C8E6E71229E8457009FCE9A /* LaunchScreen.storyboard in Resources */,
@@ -502,6 +530,8 @@
 			files = (
 				9C17852E229E745900744507 /* LoginViewController.swift in Sources */,
 				9C17853B229E745900744507 /* APIService.swift in Sources */,
+				CFA62B4022A182DC002840DE /* UserReviews.swift in Sources */,
+				CFA62B3822A1408D002840DE /* InforRestaurantView.swift in Sources */,
 				9C178534229E745900744507 /* UserReponsitory.swift in Sources */,
 				9C17852F229E745900744507 /* RegisterViewController.swift in Sources */,
 				9C178527229E745900744507 /* UIView+.swift in Sources */,
@@ -518,6 +548,7 @@
 				9C17853D229E745900744507 /* ReviewsRequest.swift in Sources */,
 				CF5053A622A0D49F00E1E01C /* Address.swift in Sources */,
 				9C178537229E745900744507 /* UserDataResult.swift in Sources */,
+				CFA62B3D22A17F1D002840DE /* ReviewCell.swift in Sources */,
 				9C178533229E745900744507 /* RepoFood.swift in Sources */,
 				9C178545229E745900744507 /* RestDetail.swift in Sources */,
 				9CE9AA2C229F84BA001184C8 /* UIColorExtension.swift in Sources */,
@@ -526,6 +557,7 @@
 				9C178546229E745900744507 /* CategoryFood.swift in Sources */,
 				9C178529229E745900744507 /* UIViewController+Debug.swift in Sources */,
 				9C178528229E745900744507 /* UIViewController+.swift in Sources */,
+				CFA62B3622A13EF1002840DE /* DetailRestaurantVC.swift in Sources */,
 				9C178540229E745900744507 /* InforRestaurantRequest.swift in Sources */,
 				9C17853C229E745900744507 /* APIUrls.swift in Sources */,
 				9C17853A229E745900744507 /* ReviewResponse.swift in Sources */,

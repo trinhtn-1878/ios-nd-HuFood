@@ -117,6 +117,12 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
             fetchDataSearch(longitude: locValue.longitude.description, latitude: locValue.latitude.description)
         }
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let detailVC = DetailRestaurantVC.instantiate()
+        detailVC.restaurant = restaurants[indexPath.row]
+        navigationController?.pushViewController(detailVC, animated: true)
+    }
 }
 
 extension MainViewController: UICollectionViewDelegateFlowLayout {

@@ -11,8 +11,9 @@ import ObjectMapper
 struct Reviews {
     var id: Int
     var text: String
-    var rating: String
-    var user: [String]
+    var rating: Double
+    var timeCreated: String
+    var user: UserReviews
 }
 
 extension Reviews {
@@ -20,8 +21,9 @@ extension Reviews {
         self.init(
             id: 0,
             text: "",
-            rating: "",
-            user: []
+            rating: 0,
+            timeCreated: "",
+            user: UserReviews()
         )
     }
 }
@@ -35,6 +37,7 @@ extension Reviews: Mappable {
         id <- map["id"]
         text <- map["text"]
         rating <- map["rating"]
+        timeCreated <- map["time_created"]
         user <- map["user"]
     }
 }
