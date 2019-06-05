@@ -23,54 +23,65 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="366" height="271"/>
+            <rect key="frame" x="0.0" y="0.0" width="386" height="291"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="azf-i4-XcT">
-                    <rect key="frame" x="10" y="132" width="346" height="44"/>
+                    <rect key="frame" x="10" y="147" width="366" height="49"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="44" id="8Au-IP-NfF"/>
+                        <constraint firstAttribute="height" constant="49" id="8Au-IP-NfF"/>
                     </constraints>
                     <nil key="textColor"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <textInputTraits key="textInputTraits" textContentType="postal-code"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="image" keyPath="setIcon" value="image"/>
+                        <userDefinedRuntimeAttribute type="image" keyPath="icon" value="star"/>
                     </userDefinedRuntimeAttributes>
                 </textField>
                 <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4XS-cr-vZB">
-                    <rect key="frame" x="10" y="44" width="346" height="44"/>
+                    <rect key="frame" x="10" y="49" width="366" height="49"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="44" id="anL-s0-ont"/>
+                        <constraint firstAttribute="height" constant="49" id="anL-s0-ont"/>
                     </constraints>
                     <nil key="textColor"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <textInputTraits key="textInputTraits"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="image" keyPath="icon" value="pin"/>
+                    </userDefinedRuntimeAttributes>
                 </textField>
                 <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Y6-am-nfN">
-                    <rect key="frame" x="10" y="176" width="346" height="44"/>
+                    <rect key="frame" x="10" y="196" width="366" height="49"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="44" id="N3N-G7-X4L"/>
+                        <constraint firstAttribute="height" constant="49" id="N3N-G7-X4L"/>
                     </constraints>
                     <nil key="textColor"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <textInputTraits key="textInputTraits"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="image" keyPath="icon" value="coin"/>
+                    </userDefinedRuntimeAttributes>
                 </textField>
                 <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vRy-7E-mWE">
-                    <rect key="frame" x="10" y="88" width="346" height="44"/>
+                    <rect key="frame" x="10" y="98" width="366" height="49"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="44" id="rHf-E9-xbA"/>
+                        <constraint firstAttribute="height" constant="49" id="rHf-E9-xbA"/>
                     </constraints>
                     <nil key="textColor"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <textInputTraits key="textInputTraits" textContentType="tel"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="image" keyPath="icon" value="phone-call"/>
+                    </userDefinedRuntimeAttributes>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="thg-Xi-0o9">
-                    <rect key="frame" x="10" y="0.0" width="346" height="44"/>
+                    <rect key="frame" x="10" y="0.0" width="366" height="49"/>
+                    <color key="backgroundColor" red="0.96155004520259069" green="0.96155004520259069" blue="0.96155004520259069" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="44" id="grF-2i-FH5"/>
+                        <constraint firstAttribute="height" constant="49" id="grF-2i-FH5"/>
                     </constraints>
-                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                     <userDefinedRuntimeAttributes>
@@ -83,7 +94,7 @@
                     </userDefinedRuntimeAttributes>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbV-Kd-mDl">
-                    <rect key="frame" x="10" y="230" width="346" height="21"/>
+                    <rect key="frame" x="10" y="255" width="366" height="21"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="NpD-C1-rdA"/>
                     </constraints>
@@ -117,10 +128,14 @@
                 <constraint firstItem="vRy-7E-mWE" firstAttribute="width" secondItem="4XS-cr-vZB" secondAttribute="width" id="utC-DN-DHZ"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="311.59420289855075" y="-345.20089285714283"/>
+            <point key="canvasLocation" x="326.08695652173918" y="-338.50446428571428"/>
         </view>
     </objects>
     <resources>
+        <image name="coin" width="24" height="24"/>
         <image name="image" width="256" height="256"/>
+        <image name="phone-call" width="24" height="24"/>
+        <image name="pin" width="24" height="24"/>
+        <image name="star" width="24" height="24"/>
     </resources>
 </document>

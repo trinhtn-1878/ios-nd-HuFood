@@ -12,6 +12,7 @@ final class DetailRestaurantVC: UIViewController {
     @IBOutlet private weak var inforRestaurantView: InforRestaurantView!
     private let repoRestDetail = FoodRepository(api: APIService.share)
     private let refreshControl = UIRefreshControl()
+    var activityIndicatorView: UIActivityIndicatorView!
     var reviews: [Reviews] = []
     var reviewTotal: [Reviews] = []
     var restaurant: Restaurant!
@@ -43,8 +44,12 @@ final class DetailRestaurantVC: UIViewController {
             $0.dataSource = self
             $0.register(cellType: ReviewCell.self)
             $0.refreshControl = refreshControl
+            $0.separatorStyle = UITableViewCell.SeparatorStyle.none
         }
         refreshControl.addTarget(self, action: #selector(refreshData(sender:)), for: .valueChanged)
+        activityIndicatorView = UIActivityIndicatorView(style: .gray)
+        tableView.tableFooterView = activityIndicatorView
+        activityIndicatorView.startAnimating()
         guard let nav = navigationController else { return }
         nav.navigationBar.isTranslucent = false
         nav.navigationBar.barTintColor = .customRedColor
@@ -79,6 +84,7 @@ final class DetailRestaurantVC: UIViewController {
             if result.count == self.reviewTotal.count - self.reviews.count { return }
             self.reviewTotal = self.reviews + result
             self.tableView.reloadData()
+            self.activityIndicatorView.stopAnimating()
         }
     }
     

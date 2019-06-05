@@ -12,6 +12,7 @@ final class SearchViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     private let repoRestSearch = FoodRepository(api: APIService.share)
     private let refreshControl = UIRefreshControl()
+    var activityIndicatorView: UIActivityIndicatorView!
     var restaurants: [Restaurant] = []
     var location: [String: String] = ["latitude": "", "longitude": ""]
     
@@ -40,6 +41,9 @@ final class SearchViewController: UIViewController {
             $0.addSubview(refreshControl)
         }
         refreshControl.addTarget(self, action: #selector(refreshData(sender:)), for: .valueChanged)
+        activityIndicatorView = UIActivityIndicatorView(style: .gray)
+        tableView.backgroundView = activityIndicatorView
+        activityIndicatorView.startAnimating()
     }
     
     @objc
@@ -54,14 +58,15 @@ final class SearchViewController: UIViewController {
         }
         repoRestSearch.fetchNearFood(longitude: longitude,
                                      latitude: latitude,
-                                     offset: 0,
+                                     offset: restaurants.count,
                                      term: term) { (result) in
                                         switch result {
                                         case .success(let response):
                                             guard let data = response?.restaurants else { return }
                                             if data.isEmpty { return }
-                                            self.restaurants = data
+                                            self.restaurants += data
                                             self.tableView .reloadData()
+                                            self.activityIndicatorView.stopAnimating()
                                         case .failure(error: let error):
                                             self.showError(message: error?.errorMessage)
                                         }
@@ -85,10 +90,9 @@ extension SearchViewController: UISearchBarDelegate {
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        restaurants = []
-        if let text = searchBar.text {
-            fetchData(term: text)
-        }
+        restaurants.removeAll()
+        let text = searchBar.text ?? ""
+        fetchData(term: text)
     }
 }
 
@@ -108,6 +112,13 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         cell.setRestDetail(rest: restaurants[indexPath.row])
         cell.selectionStyle = .none
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row == restaurants.count - 1 {
+            let text = searchbar.text ?? ""
+            fetchData(term: text)
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

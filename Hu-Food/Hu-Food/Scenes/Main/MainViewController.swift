@@ -15,7 +15,9 @@ final class MainViewController: UIViewController {
     @IBOutlet private weak var btnUser: UIButton!
     private let repoRestSearch = FoodRepository(api: APIService.share)
     private var restaurants: [Restaurant] = []
+    private let refreshControl = UIRefreshControl()
     var locationManager: CLLocationManager!
+    var activityIndicatorView: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,16 +54,29 @@ final class MainViewController: UIViewController {
     
     func configView() {
         searchbar.delegate = self
+        searchbar.backgroundImage = UIImage()
         collectionView.do {
             $0.delegate = self
             $0.dataSource = self
             $0.register(cellType: RestaurantCell.self)
+            $0.refreshControl = refreshControl
         }
+        refreshControl.addTarget(self, action: #selector(refreshData(sender:)), for: .valueChanged)
+        activityIndicatorView = UIActivityIndicatorView(style: .gray)
+        collectionView.backgroundView = activityIndicatorView
+        activityIndicatorView.startAnimating()
     }
     
-    func fetchDataSearch(longitude: String, latitude: String) {
-        repoRestSearch.fetchNearFood(longitude: longitude,
-                                     latitude: latitude,
+    @objc
+    func refreshData(sender: Any) {
+        fetchDataSearch()
+        refreshControl.endRefreshing()
+    }
+    
+    func fetchDataSearch() {
+        guard let locValue = locationManager.location?.coordinate else { return }
+        repoRestSearch.fetchNearFood(longitude: String(locValue.longitude),
+                                     latitude: String(locValue.latitude),
                                      offset: restaurants.count,
                                      term: "") { (result) in
                                         switch result {
@@ -70,6 +85,7 @@ final class MainViewController: UIViewController {
                                             if data.isEmpty { return }
                                             self.restaurants += data
                                             self.collectionView.reloadData()
+                                            self.activityIndicatorView.stopAnimating()
                                         case .failure(error: let error):
                                             self.showError(message: error?.errorMessage)
                                         }
@@ -95,8 +111,8 @@ extension MainViewController: UISearchBarDelegate {
 
 extension MainViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let locValue = locationManager.location?.coordinate else { return }
-        fetchDataSearch(longitude: locValue.longitude.description, latitude: locValue.latitude.description)
+        restaurants.removeAll()
+        fetchDataSearch()
     }
 }
 
@@ -113,8 +129,7 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         if indexPath.row == restaurants.count - 1 {
-            guard let locValue = locationManager.location?.coordinate else { return }
-            fetchDataSearch(longitude: locValue.longitude.description, latitude: locValue.latitude.description)
+            fetchDataSearch()
         }
     }
     

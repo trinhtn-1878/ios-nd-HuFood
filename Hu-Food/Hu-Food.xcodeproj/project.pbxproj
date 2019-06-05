@@ -38,6 +38,7 @@
 		9C178545229E745900744507 /* RestDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C17851D229E745900744507 /* RestDetail.swift */; };
 		9C178546229E745900744507 /* CategoryFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C17851E229E745900744507 /* CategoryFood.swift */; };
 		9C2A6E0222A7622E00CC54BB /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2A6E0122A7622E00CC54BB /* DateExtension.swift */; };
+		9C2A6E0422A7B66800CC54BB /* TextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2A6E0322A7B66800CC54BB /* TextField+.swift */; };
 		9C2DCCA722A6522D003992BF /* ReviewRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2DCCA622A6522D003992BF /* ReviewRepository.swift */; };
 		9C8E6E6E229E842B009FCE9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C1784F3229E745900744507 /* Main.storyboard */; };
 		9C8E6E6F229E842B009FCE9A /* LoginAndRegister.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C1784F6229E745900744507 /* LoginAndRegister.storyboard */; };
@@ -107,6 +108,7 @@
 		9C17851F229E745900744507 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		9C178520229E745900744507 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C2A6E0122A7622E00CC54BB /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		9C2A6E0322A7B66800CC54BB /* TextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+.swift"; sourceTree = "<group>"; };
 		9C2DCCA622A6522D003992BF /* ReviewRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewRepository.swift; sourceTree = "<group>"; };
 		9CD16441229655F7007CAAA0 /* Hu-Food.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hu-Food.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CE9AA2B229F84BA001184C8 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				9C1784F0229E745900744507 /* UIViewController+Debug.swift */,
 				9CE9AA2B229F84BA001184C8 /* UIColorExtension.swift */,
 				9C2A6E0122A7622E00CC54BB /* DateExtension.swift */,
+				9C2A6E0322A7B66800CC54BB /* TextField+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -566,6 +569,7 @@
 				CFA62B3822A1408D002840DE /* InforRestaurantView.swift in Sources */,
 				9C178534229E745900744507 /* UserReponsitory.swift in Sources */,
 				9C17852F229E745900744507 /* RegisterViewController.swift in Sources */,
+				9C2A6E0422A7B66800CC54BB /* TextField+.swift in Sources */,
 				9C178527229E745900744507 /* UIView+.swift in Sources */,
 				9C178535229E745900744507 /* CustomRequestAdapter.swift in Sources */,
 				9C2DCCA722A6522D003992BF /* ReviewRepository.swift in Sources */,
