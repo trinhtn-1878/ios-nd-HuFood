@@ -7,25 +7,25 @@
 //
 
 final class DetailRestaurantVC: UIViewController {
-    @IBOutlet private weak var contentViewHeight: NSLayoutConstraint!
-    @IBOutlet private weak var tableViewHeight: NSLayoutConstraint!
     @IBOutlet private weak var imageView: UIImageView!
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var inforRestaurantView: InforRestaurantView!
     private let repoRestDetail = FoodRepository(api: APIService.share)
+    private let refreshControl = UIRefreshControl()
     var reviews: [Reviews] = []
+    var reviewTotal: [Reviews] = []
     var restaurant: Restaurant!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configView()
-        fetchDataReview()
         setupData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.isNavigationBarHidden = false
+        fetchDataReview()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -41,9 +41,10 @@ final class DetailRestaurantVC: UIViewController {
         tableView.do {
             $0.delegate = self
             $0.dataSource = self
-            $0.isScrollEnabled = false
             $0.register(cellType: ReviewCell.self)
+            $0.refreshControl = refreshControl
         }
+        refreshControl.addTarget(self, action: #selector(refreshData(sender:)), for: .valueChanged)
         guard let nav = navigationController else { return }
         nav.navigationBar.isTranslucent = false
         nav.navigationBar.barTintColor = .customRedColor
@@ -53,11 +54,10 @@ final class DetailRestaurantVC: UIViewController {
             [NSAttributedString.Key.foregroundColor: UIColor.white]
     }
     
-    func updateHeight() {
-        tableView.layoutIfNeeded()
-        tableViewHeight.constant = tableView.contentSize.height
-        contentViewHeight.constant = inforRestaurantView.bounds.height
-            + tableViewHeight.constant + imageView.bounds.height
+    @objc
+    func refreshData(sender: Any) {
+        fetchDataReview()
+        refreshControl.endRefreshing()
     }
     
     func fetchDataReview() {
@@ -67,11 +67,18 @@ final class DetailRestaurantVC: UIViewController {
                 guard let data = response?.reviews else { return }
                 if data.isEmpty { return }
                 self.reviews = data
-                self.tableView.reloadData()
-                self.updateHeight()
+                self.loadReviewFirebase()
             case.failure(error: let error):
                 self.showError(message: error?.errorMessage)
             }
+        }
+    }
+    
+    func loadReviewFirebase() {
+        ReviewRepository.shared.getUserReview(restId: restaurant.id, limit: UInt(5 + reviewTotal.count)) { result in
+            if result.count == self.reviewTotal.count - self.reviews.count { return }
+            self.reviewTotal = self.reviews + result
+            self.tableView.reloadData()
         }
     }
     
@@ -86,18 +93,30 @@ final class DetailRestaurantVC: UIViewController {
         mapVC.restaurants = restaurant
         navigationController?.pushViewController(mapVC, animated: true)
     }
+
+    @IBAction private func handleWriteReviewTapped(_ sender: Any) {
+        let reviewVC = WritingReviewVC.instantiate()
+        reviewVC.restaurants = restaurant
+        navigationController?.pushViewController(reviewVC, animated: true)
+    }
 }
 
 extension DetailRestaurantVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return reviews.count
+        return reviewTotal.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: ReviewCell = tableView.dequeueReusableCell(for: indexPath)
-        cell.setData(reviews: reviews[indexPath.row])
+        cell.setData(reviews: reviewTotal[indexPath.row])
         cell.selectionStyle = .none
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row == reviewTotal.count - 1 {
+            loadReviewFirebase()
+        }
     }
 }
 

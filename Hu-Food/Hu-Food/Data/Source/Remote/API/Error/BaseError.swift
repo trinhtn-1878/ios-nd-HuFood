@@ -15,6 +15,7 @@ enum BaseError: Error {
     case apiFailure(error: ErrorResponse?)
     case confirmPasswordInvalid
     case authFailure(error: Error?)
+    case reviewTextEmpty
     
     var errorMessage: String? {
         switch self {
@@ -36,6 +37,8 @@ enum BaseError: Error {
                 return error.message
             }
             return "Error"
+        case .reviewTextEmpty:
+            return "Text can't be null"
         default:
             return "Unexpected Error"
         }

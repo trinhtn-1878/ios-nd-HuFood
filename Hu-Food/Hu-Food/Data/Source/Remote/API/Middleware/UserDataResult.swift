@@ -8,7 +8,7 @@
 
 import Firebase
 
-enum FirebaseResult<T> {
-    case success(T?)
+enum FirebaseResult {
+    case success
     case failure(error: BaseError?)
 }
