@@ -66,18 +66,20 @@ final class WritingReviewVC: UIViewController {
     
     @objc
     func handleSendTapped() {
+        let date = Date()
         guard let id = restaurants?.id,
             let text = textView.text,
-            let date = getCurrentTime() else { return }
+            let currentTime = date.getCurrentTime() else { return }
             let rate = Double(slider.value)
+        
         ReviewRepository.shared.pushUsersReview(restId: id,
                                                 text: text,
                                                 rate: rate,
-                                                date: date,
+                                                date: currentTime,
                                                 name: username) { (result) in
                                                 switch result {
                                                 case .success:
-                                                    self.navigationController?.popViewController(animated: true)
+                                                    self.dismissView()
                                                 case .failure(error: let error):
                                                     self.showError(message: error?.errorMessage)
                                                 }
@@ -98,14 +100,7 @@ final class WritingReviewVC: UIViewController {
         slider.addTarget(self, action: #selector(sliderValueChange(sender:)), for: .valueChanged)
         slider.value = defaulRateValue
     }
-    
-    func getCurrentTime() -> String? {
-        let currentDateTime = Date()
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd' 'HH:mm:ss"
-        return formatter.string(from: currentDateTime)
-    }
-    
+
     func getUserName() {
         UserRepository.shared.getCurrentUserName { (result) in
             self.username = result
@@ -116,6 +111,13 @@ final class WritingReviewVC: UIViewController {
         namelb.text = restaurants?.name
         addresslb.text = restaurants?.address?.address1
         ratelb.text = String(defaulRateValue)
+    }
+    
+    func dismissView() {
+        NotificationCenter.default.removeObserver(self,
+                                                  name: UIResponder.keyboardWillShowNotification,
+                                                  object: nil)
+        self.navigationController?.popViewController(animated: true)
     }
 }
 

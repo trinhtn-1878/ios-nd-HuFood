@@ -48,18 +48,19 @@ final class ReviewRepository: ReviewRepositoryType {
             .child(restId)
             .queryLimited(toFirst: limit)
             .observeSingleEvent(of: .value) { (snapshot) in
-            let value = snapshot.value as? NSDictionary
-            let keyValues = Array(value?.allValues ?? Array())
-            var allReview: [Reviews] = []
-            for values in keyValues {
-                var review = Reviews()
-                review.text = (values as? [String: Any])?["text"] as? String ?? ""
-                review.user.name = (values as? [String: Any])?["name"] as? String ?? ""
-                review.rating = (values as? [String: Any])?["rate"] as? Double ?? 0
-                review.timeCreated = (values as? [String: Any])?["date"] as? String ?? ""
-                allReview.append(review)
+                let value = snapshot.value as? NSDictionary
+                let keyValues = Array(value?.allValues ?? Array())
+                var allReview: [Reviews] = []
+                for values in keyValues {
+                    var review = Reviews()
+                    let value = values as? [String: Any]
+                    review.text = value?["text"] as? String ?? ""
+                    review.user.name = value?["name"] as? String ?? ""
+                    review.rating = value?["rate"] as? Double ?? 0
+                    review.timeCreated = value?["date"] as? String ?? ""
+                    allReview.append(review)
+                }
+                completion(allReview.sorted(by: { $0.timeCreated < $1.timeCreated }))
             }
-            completion(allReview.sorted(by: { $0.timeCreated < $1.timeCreated }))
-        }
     }
 }
