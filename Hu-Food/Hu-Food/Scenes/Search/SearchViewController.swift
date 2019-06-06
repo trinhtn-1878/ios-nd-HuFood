@@ -109,7 +109,9 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: SearchResultCell = tableView.dequeueReusableCell(for: indexPath)
-        cell.setRestDetail(rest: restaurants[indexPath.row])
+        if restaurants.isEmpty == false {
+            cell.setRestDetail(rest: restaurants[indexPath.row])
+        }
         cell.selectionStyle = .none
         return cell
     }

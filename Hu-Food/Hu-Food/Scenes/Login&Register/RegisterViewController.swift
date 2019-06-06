@@ -19,6 +19,7 @@ final class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configView()
+        hideKeyboardWhenTappedAround() 
     }
     
     deinit {
