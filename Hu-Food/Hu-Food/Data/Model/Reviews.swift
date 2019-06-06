@@ -13,6 +13,7 @@ struct Reviews {
     var text: String
     var rating: Double
     var timeCreated: String
+    var url: String?
     var user: UserReviews
 }
 
@@ -23,6 +24,7 @@ extension Reviews {
             text: "",
             rating: 0,
             timeCreated: "",
+            url: "",
             user: UserReviews()
         )
     }
@@ -38,6 +40,7 @@ extension Reviews: Mappable {
         text <- map["text"]
         rating <- map["rating"]
         timeCreated <- map["time_created"]
+        url <- map["url"]
         user <- map["user"]
     }
 }

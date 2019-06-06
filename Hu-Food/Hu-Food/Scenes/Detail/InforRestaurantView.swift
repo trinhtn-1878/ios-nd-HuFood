@@ -14,6 +14,7 @@ final class InforRestaurantView: UIView {
     @IBOutlet private weak var price: UITextField!
     @IBOutlet private weak var category: UILabel!
     @IBOutlet private weak var reviewLb: UILabel!
+    var callback: ((String?) -> Void)?
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -33,6 +34,18 @@ final class InforRestaurantView: UIView {
         price.text = "Price: " + rest.price
         address.text = "Address: " + (rest.address?.address1 ?? "")
         category.text = rest.categoryFood.isEmpty ? "" : rest.categoryFood[0].title
+    }
+    
+    @IBAction private func handleInforTapped(_ sender: Any) {
+        if let cb = callback {
+            cb("""
+                This is price level, for example:
+                $: Cheap
+                $$$: Normal
+                $$$$: Expensive
+                """
+            )
+        }
     }
 }
 

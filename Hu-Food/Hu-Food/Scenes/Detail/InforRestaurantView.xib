@@ -36,7 +36,7 @@
                     <textInputTraits key="textInputTraits" textContentType="postal-code"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="image" keyPath="setIcon" value="image"/>
-                        <userDefinedRuntimeAttribute type="image" keyPath="icon" value="star"/>
+                        <userDefinedRuntimeAttribute type="image" keyPath="icon" value="star-1"/>
                     </userDefinedRuntimeAttributes>
                 </textField>
                 <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4XS-cr-vZB">
@@ -48,7 +48,7 @@
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <textInputTraits key="textInputTraits"/>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="image" keyPath="icon" value="pin"/>
+                        <userDefinedRuntimeAttribute type="image" keyPath="icon" value="placeholder"/>
                     </userDefinedRuntimeAttributes>
                 </textField>
                 <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Y6-am-nfN">
@@ -60,7 +60,8 @@
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <textInputTraits key="textInputTraits"/>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="image" keyPath="icon" value="coin"/>
+                        <userDefinedRuntimeAttribute type="image" keyPath="icon" value="price-tag"/>
+                        <userDefinedRuntimeAttribute type="image" keyPath="infor" value="information"/>
                     </userDefinedRuntimeAttributes>
                 </textField>
                 <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vRy-7E-mWE">
@@ -72,7 +73,7 @@
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <textInputTraits key="textInputTraits" textContentType="tel"/>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="image" keyPath="icon" value="phone-call"/>
+                        <userDefinedRuntimeAttribute type="image" keyPath="icon" value="phone-receiver"/>
                     </userDefinedRuntimeAttributes>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="thg-Xi-0o9">
@@ -102,6 +103,17 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0fb-Nj-R5w">
+                    <rect key="frame" x="327" y="196" width="49" height="49"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="49" id="Cnt-7F-CCa"/>
+                        <constraint firstAttribute="width" constant="49" id="Igi-Qk-uJX"/>
+                    </constraints>
+                    <state key="normal" image="information"/>
+                    <connections>
+                        <action selector="handleInforTapped:" destination="-1" eventType="touchUpInside" id="1wi-5F-bxL"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
@@ -114,7 +126,9 @@
                 <constraint firstItem="vRy-7E-mWE" firstAttribute="top" secondItem="4XS-cr-vZB" secondAttribute="bottom" id="Mqw-Io-MeT"/>
                 <constraint firstItem="azf-i4-XcT" firstAttribute="top" secondItem="vRy-7E-mWE" secondAttribute="bottom" id="Pgg-nN-fOT"/>
                 <constraint firstItem="thg-Xi-0o9" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="QXv-W2-BKd"/>
+                <constraint firstItem="0fb-Nj-R5w" firstAttribute="top" secondItem="azf-i4-XcT" secondAttribute="bottom" id="ZNM-mz-GVE"/>
                 <constraint firstAttribute="trailing" secondItem="6Y6-am-nfN" secondAttribute="trailing" constant="10" id="ZpQ-EC-1P0"/>
+                <constraint firstAttribute="trailing" secondItem="0fb-Nj-R5w" secondAttribute="trailing" constant="10" id="bwi-IS-z3k"/>
                 <constraint firstItem="dbV-Kd-mDl" firstAttribute="width" secondItem="6Y6-am-nfN" secondAttribute="width" id="gTm-Nr-XN8"/>
                 <constraint firstItem="4XS-cr-vZB" firstAttribute="top" secondItem="thg-Xi-0o9" secondAttribute="bottom" id="kju-fP-BCO"/>
                 <constraint firstItem="6Y6-am-nfN" firstAttribute="top" secondItem="azf-i4-XcT" secondAttribute="bottom" id="lmV-Gi-EQr"/>
@@ -132,10 +146,11 @@
         </view>
     </objects>
     <resources>
-        <image name="coin" width="24" height="24"/>
         <image name="image" width="256" height="256"/>
-        <image name="phone-call" width="24" height="24"/>
-        <image name="pin" width="24" height="24"/>
-        <image name="star" width="24" height="24"/>
+        <image name="information" width="24" height="24"/>
+        <image name="phone-receiver" width="24" height="24"/>
+        <image name="placeholder" width="24" height="24"/>
+        <image name="price-tag" width="24" height="24"/>
+        <image name="star-1" width="24" height="24"/>
     </resources>
 </document>

@@ -118,7 +118,9 @@ final class MapViewController: UIViewController {
             guard let response = response else { return }
             for route in response.routes {
                 self.mapView.addOverlay(route.polyline)
-                self.mapView.setVisibleMapRect(route.polyline.boundingMapRect, animated: true)
+                self.mapView.setVisibleMapRect(route.polyline.boundingMapRect,
+                                               edgePadding: UIEdgeInsets(top: -100, left: -50, bottom: -50, right: -50),
+                                               animated: true)
             }
         }
     }

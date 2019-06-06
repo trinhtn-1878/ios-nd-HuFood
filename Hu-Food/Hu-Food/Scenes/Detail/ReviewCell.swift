@@ -17,7 +17,7 @@ final class ReviewCell: UITableViewCell, NibReusable {
     
     func setData(reviews: Reviews) {
         imgView.kf.setImage(with: URL(string: reviews.user.imageUrl),
-                            placeholder: UIImage(named: "imagePlaceHolder"))
+                            placeholder: UIImage(named: "user-1"))
         name.text = reviews.user.name
         rating.text = String(reviews.rating)
         date.text = reviews.timeCreated

@@ -91,8 +91,18 @@ extension SearchViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         restaurants.removeAll()
-        let text = searchBar.text ?? ""
+        NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(self.reload), object: nil)
+        self.perform(#selector(self.reload), with: nil, afterDelay: 0.5)
+        
+    }
+    
+    @objc
+    func reload() {
+        let text = searchbar.text ?? ""
         fetchData(term: text)
+        if restaurants.isEmpty {
+            tableView.reloadData()
+        }
     }
 }
 
@@ -103,7 +113,9 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detailVC = DetailRestaurantVC.instantiate()
-        detailVC.restaurant = restaurants[indexPath.row]
+        if restaurants.isEmpty == false {
+            detailVC.restaurant = restaurants[indexPath.row]
+        }
         navigationController?.pushViewController(detailVC, animated: true)
     }
     

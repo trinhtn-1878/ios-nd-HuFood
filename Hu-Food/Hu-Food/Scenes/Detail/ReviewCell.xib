@@ -35,7 +35,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PGH-r6-4ez">
-                                <rect key="frame" x="271.5" y="5" width="251.5" height="21"/>
+                                <rect key="frame" x="271.5" y="5" width="246.5" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="DnQ-sT-QfM"/>
                                 </constraints>
@@ -44,7 +44,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o8P-Vs-ySf">
-                                <rect key="frame" x="70" y="44" width="201.5" height="21"/>
+                                <rect key="frame" x="70" y="31" width="201.5" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="3kS-BD-TpP"/>
                                 </constraints>
@@ -73,13 +73,13 @@
                             <constraint firstItem="WDT-BG-dps" firstAttribute="leading" secondItem="KgA-Gr-gtL" secondAttribute="leading" constant="5" id="18o-6D-7b1"/>
                             <constraint firstItem="Ti3-JH-ZTd" firstAttribute="width" secondItem="KgA-Gr-gtL" secondAttribute="width" multiplier="1:2" constant="-60" id="LK8-lt-aG1"/>
                             <constraint firstItem="WDT-BG-dps" firstAttribute="top" secondItem="KgA-Gr-gtL" secondAttribute="top" constant="5" id="PnN-It-83F"/>
-                            <constraint firstAttribute="trailing" secondItem="PGH-r6-4ez" secondAttribute="trailing" id="QMe-Yh-i6Z"/>
+                            <constraint firstAttribute="trailing" secondItem="PGH-r6-4ez" secondAttribute="trailing" constant="5" id="QMe-Yh-i6Z"/>
                             <constraint firstItem="Ti3-JH-ZTd" firstAttribute="leading" secondItem="WDT-BG-dps" secondAttribute="trailing" constant="5" id="TGB-1O-0ca"/>
                             <constraint firstItem="Ti3-JH-ZTd" firstAttribute="top" secondItem="KgA-Gr-gtL" secondAttribute="top" constant="5" id="VcF-eT-6z0"/>
                             <constraint firstItem="e7e-oj-r21" firstAttribute="leading" secondItem="KgA-Gr-gtL" secondAttribute="leading" constant="5" id="XF3-RL-Dek"/>
                             <constraint firstItem="PGH-r6-4ez" firstAttribute="top" secondItem="KgA-Gr-gtL" secondAttribute="top" constant="5" id="Zyy-xL-d1Z"/>
                             <constraint firstItem="o8P-Vs-ySf" firstAttribute="leading" secondItem="WDT-BG-dps" secondAttribute="trailing" constant="5" id="bLZ-g0-MGw"/>
-                            <constraint firstItem="o8P-Vs-ySf" firstAttribute="top" secondItem="Ti3-JH-ZTd" secondAttribute="bottom" constant="18" id="cWJ-07-FjB"/>
+                            <constraint firstItem="o8P-Vs-ySf" firstAttribute="top" secondItem="Ti3-JH-ZTd" secondAttribute="bottom" constant="5" id="cWJ-07-FjB"/>
                             <constraint firstAttribute="trailing" secondItem="e7e-oj-r21" secondAttribute="trailing" constant="5" id="iNe-H4-Ufm"/>
                             <constraint firstItem="PGH-r6-4ez" firstAttribute="leading" secondItem="Ti3-JH-ZTd" secondAttribute="trailing" id="jDQ-kF-ExC"/>
                             <constraint firstItem="o8P-Vs-ySf" firstAttribute="width" secondItem="Ti3-JH-ZTd" secondAttribute="width" id="oh4-Kc-5kT"/>

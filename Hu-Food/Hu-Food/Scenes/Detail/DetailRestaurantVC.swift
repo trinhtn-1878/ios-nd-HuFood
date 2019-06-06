@@ -57,6 +57,9 @@ final class DetailRestaurantVC: UIViewController {
         navigationItem.title = restaurant.name
         nav.navigationBar.titleTextAttributes =
             [NSAttributedString.Key.foregroundColor: UIColor.white]
+        inforRestaurantView.callback = { (text) in
+            self.showAlert(message: text, title: "Information")
+        }
     }
     
     @objc
@@ -70,7 +73,10 @@ final class DetailRestaurantVC: UIViewController {
             switch result {
             case .success(let response):
                 guard let data = response?.reviews else { return }
-                if data.isEmpty { return }
+                if data.isEmpty {
+                    self.activityIndicatorView.stopAnimating()
+                    return
+                }
                 self.reviews = data
                 self.loadReviewFirebase()
             case.failure(error: let error):
@@ -122,6 +128,14 @@ extension DetailRestaurantVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if indexPath.row == reviewTotal.count - 1 {
             loadReviewFirebase()
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let rest = reviewTotal[indexPath.row]
+        if let urlReview = rest.url {
+            guard let url = URL(string: urlReview) else { return }
+            UIApplication.shared.open(url)
         }
     }
 }

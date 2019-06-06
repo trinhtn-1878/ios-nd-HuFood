@@ -16,7 +16,7 @@ extension UITextField {
             leftViewMode = .always
             let imageView = UIImageView(image: image)
             imageView.contentMode = .scaleAspectFit
-            imageView.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+            imageView.frame = CGRect(x: 0, y: 0, width: 50, height: 30)
             leftView = imageView
         }
     }
