@@ -7,8 +7,8 @@
 //
 
 final class UserViewController: UIViewController {
-    @IBOutlet private weak var tableView: UITableView!
-   
+    @IBOutlet private weak var userNamelb: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configView()
@@ -19,40 +19,25 @@ final class UserViewController: UIViewController {
     }
     
     func configView() {
-        tableView.do {
-            $0.delegate = self
-            $0.dataSource = self
-        }
-    }
-}
-
-extension UserViewController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        setName()
+        guard let nav = navigationController else { return }
+        nav.navigationBar.isTranslucent = false
+        nav.navigationBar.barTintColor = .customRedColor
+        nav.navigationBar.tintColor = .white
+        navigationItem.title = "User"
+        nav.navigationBar.titleTextAttributes =
+            [NSAttributedString.Key.foregroundColor: UIColor.white]
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        switch indexPath.row {
-        case 0:
-            UserRepository.shared.getCurrentUserName { (name) in
-                cell.textLabel?.text = "Username: " + name
-            }
-        default:
-            cell.textLabel?.text = "Sign out"
-            cell.textLabel?.textColor = .red
-            cell.textLabel?.textAlignment = .center
+    func setName() {
+        UserRepository.shared.getCurrentUserName { (name) in
+            self.userNamelb.text = name
         }
-        return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 1 {
-            UserRepository.shared.signOut(completion: {
-                let loginVC = LoginViewController.instantiate()
-                self.navigationController?.viewControllers = [loginVC]
-            })
-        }
+    @IBAction private func handleSignoutTapped(_ sender: Any) {
+        let loginVC = LoginViewController.instantiate()
+        navigationController?.viewControllers = [loginVC]
     }
 }
 
