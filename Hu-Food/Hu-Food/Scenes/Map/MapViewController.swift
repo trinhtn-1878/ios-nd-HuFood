@@ -39,6 +39,10 @@ final class MapViewController: UIViewController {
         logDeinit()
     }
     
+    func configView() {
+        navigationItem.title = "Map"
+    }
+    
     func addAnnotation() {
         let restaurantPoint = MKPointAnnotation()
         restaurantPoint.title = restaurants.name

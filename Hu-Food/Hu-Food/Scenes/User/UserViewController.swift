@@ -6,6 +6,8 @@
 //  Copyright © 2019 nguyen.the.trinh. All rights reserved.
 //
 
+import IHProgressHUD
+
 final class UserViewController: UIViewController {
     @IBOutlet private weak var userNamelb: UILabel!
     
@@ -36,8 +38,15 @@ final class UserViewController: UIViewController {
     }
     
     @IBAction private func handleSignoutTapped(_ sender: Any) {
-        let loginVC = LoginViewController.instantiate()
-        navigationController?.viewControllers = [loginVC]
+        UserRepository.shared.signOut(completion: { (result) in
+            switch result {
+            case .success:
+                let loginVC = LoginViewController.instantiate()
+                self.navigationController?.viewControllers = [loginVC]
+            case .failure(let error):
+                self.showError(message: error?.errorMessage)
+            }
+        })
     }
 }
 

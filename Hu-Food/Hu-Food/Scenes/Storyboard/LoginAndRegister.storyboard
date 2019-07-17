@@ -82,9 +82,6 @@
                                         <size key="value" width="5" height="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="handleSignInTapped:" destination="0H6-rb-Gpg" eventType="touchUpInside" id="haE-Hm-K05"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uln-ui-Tpt">
                                 <rect key="frame" x="20" y="327.5" width="374" height="63"/>

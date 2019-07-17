@@ -7,11 +7,12 @@
 //
 
 import Firebase
+import IHProgressHUD
 
 protocol UserRepositoryType {
     func signIn(email: String, password: String, completion: @escaping(AuthDataResult) -> Void)
     func register(email: String, password: String, name: String, completion: @escaping(AuthDataResult) -> Void)
-    func signOut(completion: @escaping() -> Void)
+    func signOut(completion: @escaping(FirebaseResult) -> Void)
     func getCurrentUserName(completion: @escaping(String) -> Void)
     func getCurrentUser() -> User?
 }
@@ -24,12 +25,17 @@ final class UserRepository: UserRepositoryType {
     }
     
     func signIn(email: String, password: String, completion: @escaping (AuthDataResult) -> Void) {
-        Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
-            guard let result = result else {
-                self.errorHandleShow(error: BaseError.authFailure(error: error))
-                return
+        IHProgressHUD.show()
+        DispatchQueue.global(qos: .default).async {
+            Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
+                guard let result = result else {
+                    self.errorHandleShow(error: BaseError.authFailure(error: error))
+                    IHProgressHUD.dismiss()
+                    return
+                }
+                completion(result)
+                IHProgressHUD.dismiss()
             }
-            completion(result)
         }
     }
     
@@ -55,12 +61,13 @@ final class UserRepository: UserRepositoryType {
         }
     }
     
-    func signOut(completion: @escaping () -> Void) {
+    func signOut(completion: @escaping (FirebaseResult) -> Void) {
         do {
             try Auth.auth().signOut()
-            completion()
+            completion(.success)
         } catch {
-            self.errorHandleShow(error: BaseError.authFailure(error: error))
+            completion(.failure(error: BaseError.authFailure(error: error)))
+            IHProgressHUD.dismiss()
         }
     }
     

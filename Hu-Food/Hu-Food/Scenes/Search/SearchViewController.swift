@@ -22,6 +22,10 @@ final class SearchViewController: UIViewController {
         fetchData(term: "")
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        print(repoRestSearch)
+    }
+    
     deinit {
         logDeinit()
     }

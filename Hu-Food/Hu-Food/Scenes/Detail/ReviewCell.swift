@@ -12,8 +12,6 @@ final class ReviewCell: UITableViewCell, NibReusable {
     @IBOutlet private weak var rating: UILabel!
     @IBOutlet private weak var date: UILabel!
     @IBOutlet private weak var review: UILabel!
-    @IBOutlet private weak var holderContentView: UIView!
-    @IBOutlet private weak var contentViewHeight: NSLayoutConstraint!
     
     func setData(reviews: Reviews) {
         imgView.kf.setImage(with: URL(string: reviews.user.imageUrl),

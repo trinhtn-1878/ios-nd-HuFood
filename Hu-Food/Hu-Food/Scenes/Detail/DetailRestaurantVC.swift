@@ -27,6 +27,7 @@ final class DetailRestaurantVC: UIViewController {
         super.viewWillAppear(animated)
         navigationController?.isNavigationBarHidden = false
         fetchDataReview()
+        print(repoRestDetail)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -57,7 +58,9 @@ final class DetailRestaurantVC: UIViewController {
         navigationItem.title = restaurant.name
         nav.navigationBar.titleTextAttributes =
             [NSAttributedString.Key.foregroundColor: UIColor.white]
-        inforRestaurantView.callback = { (text) in
+        
+        inforRestaurantView.callback = {[weak self] text in
+            guard let self = self else { return }
             self.showAlert(message: text, title: "Information")
         }
     }
@@ -69,7 +72,8 @@ final class DetailRestaurantVC: UIViewController {
     }
     
     func fetchDataReview() {
-        repoRestDetail.fetchReviews(id: restaurant.id) { (result) in
+        repoRestDetail.fetchReviews(id: restaurant.id) { [weak self] result in
+            guard let self = self else { return }
             switch result {
             case .success(let response):
                 guard let data = response?.reviews else { return }
@@ -86,7 +90,8 @@ final class DetailRestaurantVC: UIViewController {
     }
     
     func loadReviewFirebase() {
-        ReviewRepository.shared.getUserReview(restId: restaurant.id, limit: UInt(5 + reviewTotal.count)) { result in
+        ReviewRepository.shared.getUserReview(restId: restaurant.id, limit: UInt(5 + reviewTotal.count)) { [weak self] result in
+            guard let self = self else { return }
             if result.count == self.reviewTotal.count - self.reviews.count { return }
             self.reviewTotal = self.reviews + result
             self.tableView.reloadData()

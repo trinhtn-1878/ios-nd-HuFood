@@ -32,6 +32,7 @@ final class MainViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.isNavigationBarHidden = true
+        print(repoRestSearch)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -78,7 +79,7 @@ final class MainViewController: UIViewController {
         repoRestSearch.fetchNearFood(longitude: String(locValue.longitude),
                                      latitude: String(locValue.latitude),
                                      offset: restaurants.count,
-                                     term: "") { (result) in
+                                     term: "") { [unowned self] result in
                                         switch result {
                                         case .success(let response):
                                             guard let data = response?.restaurants else { return }

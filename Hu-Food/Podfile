@@ -28,5 +28,13 @@ target 'Hu-Food' do
   
   #  Image
   pod 'Kingfisher', '4.10.1'
+  
+  #
+  pod 'IHProgressHUD'
 
+  #Rx
+  pod 'RxSwift', '~> 4.0'
+
+  pod 'RxCocoa', '~> 4.0'
+  
 end

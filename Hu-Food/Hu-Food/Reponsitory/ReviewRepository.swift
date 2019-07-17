@@ -18,6 +18,8 @@ protocol ReviewRepositoryType {
     func getUserReview(restId: String,
                        limit: UInt,
                        completion: @escaping([Reviews]) -> Void)
+    
+    func deleteReview(restId: String, reviewId: String, completion: @escaping(FirebaseResult) -> Void)
 }
 
 final class ReviewRepository: ReviewRepositoryType {
@@ -29,7 +31,10 @@ final class ReviewRepository: ReviewRepositoryType {
                          date: String,
                          name: String,
                          completion: @escaping (FirebaseResult) -> Void) {
-        if text.isEmpty { completion(.failure(error: BaseError.reviewTextEmpty)) }
+        if text.isEmpty {
+            completion(.failure(error: BaseError.reviewTextEmpty))
+            return
+        }
         let ref = Database.database().reference()
         let usersReference = ref.child("users").child("Restaurants").child(restId).child(date)
         let values = ["text": text, "rate": rate, "date": date, "name": name] as [String: Any]
@@ -62,5 +67,14 @@ final class ReviewRepository: ReviewRepositoryType {
                 }
                 completion(allReview.sorted(by: { $0.timeCreated < $1.timeCreated }))
             }
+    }
+    
+    func deleteReview(restId: String, reviewId: String, completion: @escaping (FirebaseResult) -> Void) {
+        let ref = Database.database().reference()
+        ref.child("users")
+            .child("Restaurants")
+            .child(restId)
+            .child(reviewId)
+            .removeValue()
     }
 }
