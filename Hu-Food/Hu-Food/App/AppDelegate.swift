@@ -27,7 +27,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         window?.rootViewController = nav
         window?.makeKeyAndVisible()
-        
+        print("test")
         return true
     }
 }
